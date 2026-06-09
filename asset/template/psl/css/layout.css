@@ -1,0 +1,879 @@
+@charset "utf-8";
+
+/* ::::::::::::::::::::::::::: */
+/* ::::: font definition ::::: */
+/* ::::::::::::::::::::::::::: */
+
+@font-face
+{
+	font-family: din-regular;
+	src: url("http://psl.fr/../fonts/din-regular.eot") /* EOT file for IE */
+}
+
+@font-face
+{
+	font-family: din-regular;
+	src: url("http://psl.fr/../fonts/din-regular.ttf") /* TTF file for CSS3 browsers */
+}
+
+@font-face
+{
+	font-family: din-medium;
+	src: url("http://psl.fr/../fonts/din-medium.eot") /* EOT file for IE */
+}
+
+@font-face
+{
+	font-family: din-medium;
+	src: url("http://psl.fr/../fonts/din-medium.ttf") /* TTF file for CSS3 browsers */
+}
+
+@font-face
+{
+	font-family: din-condensed-medium;
+	src: url("http://psl.fr/../fonts/din-condensed-medium.eot") /* EOT file for IE */
+}
+
+@font-face
+{
+	font-family: din-condensed-medium;
+	src: url("http://psl.fr/../fonts/din-condensed-medium.ttf") /* TTF file for CSS3 browsers */
+}
+
+*
+{
+	outline: none!important;
+}
+
+/* ::::::::::::::::::::::::: */
+/* ::::: ie6 dinosaurs ::::: */
+/* ::::::::::::::::::::::::: */
+
+div.ie6-overlay
+{
+	background: #000;
+	filter: alpha(opacity = 50);
+	width: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+
+div.ie6-box
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -265px;
+	margin-top: -100px;
+	width: 500px;
+	background: #fff;
+	padding: 15px;
+	font-weight: bold;
+	color: #000;
+	border: 5px solid #000;
+	z-index: 1;
+}
+
+div.ie6-box a
+{
+	color: red;
+	font-weight: bold;
+}
+
+/* ::::::::::::::::: */
+/* :::::: home ::::: */
+/* ::::::::::::::::: */
+
+html, body
+{
+	height: 100%;
+}
+
+.common
+{
+	background: #acb5bc url(http://psl.fr/../img/body-repeat.gif) repeat-x 0 0;
+}
+
+.common #layer-0
+{
+	background: url(http://psl.fr/../img/body-bg.jpg) no-repeat center 0;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	min-width: 1003px;
+}
+
+.common #layer-0 div.left-pan,
+.common #layer-0 div.right-pan
+{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background: url(http://psl.fr/../img/bg-w-30.png) repeat 0 0;
+}
+
+.common #layer-0 div.left-pan
+{
+	left: 0px;
+	right: 50%;
+	margin-right: 580px;
+}
+
+.common #layer-0 div.right-pan
+{
+	right: 0px;
+	left: 50%;
+	margin-left: 570px;
+}
+
+.common #global-container
+{
+	width: 1003px;
+	position: relative;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -51px;
+	background: url(http://psl.fr/../img/body-bg.jpg) no-repeat center 0;
+}
+
+.common #inner-container
+{
+	height: 670px;
+	position: relative;
+}
+
+.common .push
+{
+	height: 81px;
+}
+
+/* ::::::::::::::::::: */
+/* :::::: header ::::: */
+/* ::::::::::::::::::: */
+
+.common #header-container
+{
+	position: absolute;
+	left: 110px;
+	top: 10px;
+}
+
+.common #header-container h1
+{
+	margin: 0;
+	background: url(http://psl.fr/../img/logo-psl.png) no-repeat 0 0;
+	width: 127px;
+	height: 69px;
+	line-height: 6em;
+	position: relative;
+}
+
+.common #header-container blockquote
+{
+	position: absolute;
+	left: 200px;
+	top: 37px;
+	color: #e5332b;
+	font-weight: bold;
+	font-size: 1.3em;
+	white-space: nowrap;
+	margin: 0;
+}
+
+.common #header-container h1 a
+{
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding-top: 100%;
+	overflow: hidden;
+	height: 0;
+}
+
+/* ::::::::::::::;::::: */
+/* :::::: top bar ::::: */
+/* :::::::::::::::;:::: */
+
+.common #top-bar
+{
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: url(http://psl.fr/../img/top-bar-repeat.gif) repeat-x 0 0;
+	z-index: 1;
+	height: 62px;
+	min-width: 227px;
+}
+
+.common #top-bar form
+{
+	margin: 0;
+	padding-left: 27px;
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+}
+
+.common #top-bar label
+{
+	display: block;
+	color: #fff;
+	font-size: .85em;
+}
+
+.common #top-bar input[type=text]
+{
+	float: left;
+}
+
+.common #top-bar button
+{
+	display: block;
+	margin: 0;
+	border: none;
+	background: url(http://psl.fr/../img/button-validate.png) no-repeat 0 0;
+	text-indent: -100000px;
+	cursor: pointer;
+	float: left;
+	height: 21px;
+	width: 21px;
+	margin-left: 13px;
+}
+
+.common #top-bar button:hover
+{
+	background-image: url(../img/button-validate-hover.png);
+}
+
+/* :::::::::::::::::::::::::: */
+/* :::::: primary links ::::: */
+/* :::::::::::::::::::::::::: */
+
+.common #primary-links-container
+{
+	background: url(http://psl.fr/../img/menu-repeat.png) repeat-y 0 0;
+	position: absolute;
+	margin: 31px 0 255px 0;
+	width: 182px;
+	min-height: 238px;
+	top: 73px;
+	left: 0;
+	z-index: 1;
+}
+
+.common #primary-links-container div.top,
+.common #primary-links-container div.bottom
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-image: url(../img/menu-bg.png);
+	background-repeat: no-repeat;
+}
+
+.common #primary-links-container div.top
+{
+	background-position: 0 0;
+	height: 31px;
+	top: 0;
+	margin-top: -31px;
+}
+
+.common #primary-links-container div.bottom
+{
+	background-position: 0 -31px;
+	height: 440px;
+	bottom: -202px;
+}
+
+.common #primary-links-container ul
+{
+	margin: 0;
+	list-style: none;
+	position: relative;
+}
+
+.common #primary-links-container ul li
+{
+	background: url(http://psl.fr/../img/menu-separator.png) no-repeat 0 0;
+	width: 100%;
+}
+
+.common #primary-links-container ul li.produits ul.lvl3
+{
+	display: none!important;
+}
+
+.common #primary-links-container ul li:first-child
+{
+	background: none;
+}
+
+.common #primary-links-container ul li a
+{
+	font-family: din-regular, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.3em;
+	display: block;
+	padding: 7px 0 7px 35px;
+	background: url(http://psl.fr/../img/menu-arrow.gif) no-repeat 20px center;
+}
+
+.common #primary-links-container ul li a.selected,
+.common #primary-links-container ul li a:hover,
+.common #primary-links-container ul li a:active,
+.common #primary-links-container ul li a:focus
+{
+	color: #fcc300;
+	background-image: url(../img/menu-arrow-hover.gif);
+}
+
+.common #primary-links-container ul li.lvl1:hover ul.lvl2,
+.common #primary-links-container ul li.lvl2:hover ul.lvl3
+{
+	display: block;
+}
+
+.common #primary-links-container ul ul
+{
+	display: none;
+	margin: -25px 0 0 150px;
+	position: absolute;
+	width: 250px;
+	background: url(http://psl.fr/../img/lvl2-bg.png) repeat 0 0;
+	padding: 10px 0;
+	-moz-box-shadow: 5px 5px 15px 0 rgba(43,39,32,0.4);
+	-webkit-box-shadow: rgba(43,39,32,0.4) 5px 5px 15px;
+	-webkit-box-shadow: 5px 5px 15px 0px rgba(43,39,32,0.4);
+}
+
+.common #primary-links-container ul ul li
+{
+	background: none;
+	line-height: 1.3em;
+}
+
+.common #primary-links-container ul ul li:hover,
+.common #primary-links-container ul ul li.selected
+{
+	background: url(http://psl.fr/../img/lvl2-hover.png) repeat 0 0;
+}
+
+.common #primary-links-container ul ul li a
+{
+	background: url(http://psl.fr/../img/menu-arrow.gif) no-repeat 15px center!important;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	padding: 5px 25px 4px 25px;
+	font-weight: bold;
+}
+
+.common #primary-links-container ul ul li a:hover,
+.common #primary-links-container ul ul li a.selected
+{
+	color: #fff;
+}
+
+.common #primary-links-container ul ul ul
+{
+	background: url(http://psl.fr/../img/lvl3-bg.png) repeat 0 0;
+}
+
+.common #primary-links-container ul ul ul li:hover,
+.common #primary-links-container ul ul ul li.selected
+{
+	background: url(http://psl.fr/../img/lvl3-hover.png) repeat 0 0;
+}
+
+/* ::::::::::::::;::::: */
+/* :::::: content ::::: */
+/* :::::::::::::::;:::: */
+
+.common #content-container
+{
+	position: absolute;
+	right: 0;
+	top: 80px;
+	width: 454px;
+}
+
+.index #content-container *:first-child
+{
+	margin: 0;
+}
+
+.common #content-container p
+{
+	font-size: .9em;
+	line-height: 1.48em;
+	margin: .5em 0;
+}
+
+/* ::::::::::::::;::::::::::: */
+/* :::::: block contact ::::: */
+/* ::::::::::::::;::::::::::: */
+
+.common #block-contact
+{
+	position: absolute;
+	right: 0;
+	top: 168px;
+	width: 235px;
+	font-size: .9em;
+	font-weight: bold;
+	color: #e5332b;
+}
+
+.common #block-contact strong
+{
+	font-size: 1.2em;
+}
+
+/* ::::::::::::::;::::::::::: */
+/* :::::: block you are ::::: */
+/* ::::::::::::::;::::::::::: */
+
+.common #block-you-are
+{
+	background: url(http://psl.fr/../img/bg-w-60.png) repeat 0 0;
+	position: absolute;
+	left: 247px;
+	bottom: 0;
+	padding: 0 20px;
+}
+
+.common #block-you-are ul.liste-puce a
+{
+	text-decoration: none;
+}
+
+.common #block-you-are ul.liste-puce a:hover
+{
+	text-decoration: underline;
+}
+
+.common #block-you-are ul.devis
+{
+	list-style: none;
+	margin-left: 0;
+}
+
+/* ::::::::::::::;::::::::: */
+/* :::::: block focus ::::: */
+/* ::::::::::::::;::::::::: */
+
+.common #block-focus
+{
+	background: url(http://psl.fr/../img/bg-w-60.png) repeat 0 0;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 0 20px 20px;
+	width: 183px;
+}
+
+.common #block-focus
+{
+	list-style: none;
+	margin-left: 0;
+}
+
+.common #block-focus h2
+{
+	margin-bottom: 0;
+}
+
+.common #block-focus ul
+{
+	margin: 0;
+	list-style: none;
+}
+
+.common #block-focus ul li
+{
+	width: 100%;
+	float: left;
+	margin-top: 1em;
+}
+
+.common #block-focus ul li a
+{
+	display: block;
+	text-decoration: none;
+}
+
+.common #block-focus ul li img
+{
+	display: block;
+	border: 1px solid #cbced0;
+}
+
+.common #block-focus ul li span.title
+{
+	display: block;
+	background: url(http://psl.fr/../img/arrow-grey.gif) no-repeat 0 center;
+	padding-left: 10px;
+}
+
+.common #block-focus ul li span.link
+{
+	display: block;
+	text-align: center;
+	background: url(http://psl.fr/../img/buttons-bg.gif) no-repeat right bottom;
+	color: #fff;
+	font-family: din-condensed-medium, Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+	padding-bottom: 2px;
+}
+
+/* ::::::::::::::::::: */
+/* :::::: footer ::::: */
+/* ::::::::::::::::::: */
+
+.common #footer-container
+{
+	height: 51px;
+	background: #596065 url(http://psl.fr/../img/footer-repeat.gif) repeat-x 0 0;
+	position: relative;
+}
+
+.common #footer-content
+{
+	width: 1003px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.common #footer-content ul
+{
+	margin: 0;
+	list-style: none;
+	position: absolute;
+	right: 85px;
+	top: 13px;
+}
+
+.common #footer-content ul li
+{
+	float: left;
+	border-left: 1px solid #ba3a35;
+	color: #fff;
+	padding: 0 10px;
+	font-size: .85em;
+	line-height: .9em;
+}
+
+.common #footer-content ul li:first-child
+{
+	border-left: none;
+}
+
+.common #footer-content ul li a
+{
+	display: block;
+	color: #fff;
+	text-decoration: none;
+}
+
+.common #footer-content ul li a:hover,
+.common #footer-content ul li a:active,
+.common #footer-content ul li a:focus
+{
+	color: #FCC300
+}
+
+.common #credits
+{
+	position: absolute;
+	left: 85px;
+	top: 10px;
+	color: #fff;
+}
+
+.common #credits p
+{
+	margin: 0;
+	font-size: .85em;
+	line-height: 1.4em;
+}
+
+/* :::::::::::::::: */
+/* ::::: page ::::: */
+/* :::::::::::::::: */
+
+.page #layer-0
+{
+	background: url(http://psl.fr/../img/body-page-bg.jpg) no-repeat center 0;
+}
+
+.page #global-container
+{
+	background: none;
+}
+
+.page #inner-container
+{
+	padding-top: 110px;
+	height: auto;
+}
+
+.page #content-container
+{
+	position: relative;
+	right: auto;
+	top: auto;
+	width: auto;
+	margin: 0 0 0 283px;
+	background: url(http://psl.fr/../img/bg-w-70.png) repeat 0 0;
+}
+
+.page #content-container p
+{
+	font-size: 1em;
+}
+
+.page #content-container h2
+{
+	font-weight: normal;
+	background: url(http://psl.fr/../img/bg-w-60.png) repeat 0 0;
+	font-family: din-medium, Arial, Helvetica, sans-serif;
+	color: #e5332b;
+	font-size: 1.8em;
+	padding: 20px 30px 5px;
+	margin: 0;
+}
+
+.page #breadcrumb-container
+{
+	font-weight: normal;
+	background: url(http://psl.fr/../img/bg-w-60.png) repeat 0 0;
+	color: #e5332b;
+	padding: 0 30px 10px;
+	margin: 0;
+	font-size: .8em;
+}
+
+.page #breadcrumb-container a
+{
+	color: #e5332b;
+	text-decoration: none;
+	padding: 0 5px;
+}
+
+.page #breadcrumb-container a:hover
+{
+	text-decoration: underline;
+}
+
+.page #breadcrumb-container a:first-child
+{
+	padding-left: 0;
+}
+
+.page #breadcrumb-container strong
+{
+	font-weight: normal;
+	padding: 0 5px;
+}
+
+.page #content-container div.inner
+{
+	padding: 20px 30px 60px;
+}
+
+.page #content-container div.inner > *:first-child
+{
+	margin-top: 0;
+}
+
+.page #primary-links-container
+{
+	background: url(http://psl.fr/../img/menu-page-repeat.png) repeat-y 0 0;
+	width: 235px;
+	top: 81px;
+}
+
+.page #primary-links-container div.top,
+.page #primary-links-container div.bottom
+{
+	background-image: url(../img/menu-page-bg.png);
+}
+
+.page #primary-links-container div.top
+{
+	height: 40px;
+	margin-top: -40px;
+}
+
+.page #primary-links-container div.bottom
+{
+	background-position: 0 -39px;
+	height: 440px;
+	bottom: -224px;
+}
+
+/* :::::::::::::::::::::: */
+/* ::::: categories ::::: */
+/* :::::::::::::::::::::: */
+
+.page div.inner ul.lvl2
+{
+	margin-left: -30px;
+	list-style: none;
+	overflow: auto;
+}
+
+.page div.inner ul.lvl2 li
+{
+	float: left;
+	margin: 0 0 5px 30px;
+}
+
+.page div.inner ul.lvl2 li a
+{
+	display: block;
+	text-decoration: none;
+	width: 200px;
+	padding-top: 125px;
+	height: 40px;
+	background-position: center 0;
+	background-repeat: no-repeat;
+	font-size: .9em;
+	line-height: 1.2em;
+}
+
+.page div.inner ul.lvl2 li a span.label
+{
+	display: block;
+	background: url(http://psl.fr/../img/arrow-grey.gif) no-repeat 0 5px;
+	padding-left: 10px;
+}
+
+.page div.inner ul.lvl2 li a:hover
+{
+	color: #E5332B;
+}
+
+/* :::::::::::::::::: */
+/* ::::: tables ::::: */
+/* :::::::::::::::::: */
+
+table.tableau-normes.hidden,
+table.tableau-normes tr > th:first-child,
+table.tableau-normes tr > td:first-child,
+table.tableau-normes tr.hide
+{
+	display: none;
+}
+
+/* :::::::::::::::::::: */
+/* ::::: products ::::: */
+/* :::::::::::::::::::: */
+
+.page div.twolife
+{
+	display: none;
+}
+
+.page div.twolife.showed
+{
+	display: block;
+}
+
+.page div.twolife p
+{
+	overflow: auto;
+}
+
+.page div.twolife a
+{
+	float: left;
+}
+
+.page div.twolife.enlarged a
+{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.page div.inner ul.lvl3
+{
+	margin-left: 0;
+	list-style: none;
+}
+
+.page div.inner ul.lvl3 li
+{
+}
+
+.page div.inner ul.lvl3 li a
+{
+	display: block;
+	text-decoration: none;
+	border-top: 1px dotted #E5332B;
+	padding: 5px 5px 5px 25px;
+	background: url(http://psl.fr/../img/arrow-grey.gif) no-repeat 10px center;
+}
+
+.page div.inner ul.lvl3 li:first-child a
+{
+	border-top: none;
+}
+
+.page div.inner ul.lvl3 li a:hover
+{
+	color: #E5332B;
+}
+
+.page div.inner ul.lvl3 li a.static
+{
+	cursor: default;
+	font-weight: bold;
+	background: none;
+}
+
+.page div.inner ul.lvl3 li a.static:hover
+{
+	color: #5E6376;
+}
+
+.page div.inner ul.lvl3 ul
+{
+	list-style: none;
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+.page div.inner ul.lvl3 ul a
+{
+	padding-top: 0;
+	padding-bottom: 0;
+	border-top: none;
+}
+
+.produits.level-2 table
+{
+	border-collapse: collapse;
+}
+
+.produits.level-2 table td
+{
+	padding: 10px;
+}
+
+#popup-container h1
+{
+	color: #E5332B;
+	font-family: din-medium,Arial,Helvetica,sans-serif;
+}
+
+#popup-container table
+{
+	width: 90%;
+}

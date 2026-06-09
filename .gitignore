@@ -1,0 +1,9 @@
+# Système
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Fichiers de travail / temporaires
+__tmp_ext.html
+*.tmp
+*~

@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="Image/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produits Sécurité Incendie | Plans, Extincteurs, RIA, Alarmes — PSL Toulouse (31)</title>
+  <meta name="description" content="Gamme complète de matériel sécurité incendie : plans d'évacuation NF X 08-070, extincteurs certifiés NF EN 3, RIA, BAES SATI, alarmes incendie type 4, signalétique photoluminescente. PSL — La Salvetat St Gilles (31).">
+  <meta name="keywords" content="extincteurs Toulouse, plans évacuation incendie, RIA robinet incendie armé, BAES blocs autonomes, alarme incendie type 4, signalétique incendie photoluminescente, sécurité incendie Haute-Garonne, PSL La Salvetat St Gilles">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Produits Sécurité Incendie — PSL Toulouse">
+  <meta property="og:description" content="Extincteurs, plans d'évacuation, RIA, BAES, alarmes, signalétique. Toute la gamme incendie certifiée NF chez PSL, La Salvetat St Gilles (31).">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-pages.css">
+
+  <style>
+    /* ─── Anchor nav catégories produits ─── */
+    .prod-anch-nav {
+      background: var(--white);
+      border-bottom: 2px solid var(--gray-light);
+      position: sticky;
+      top: 112px;
+      z-index: 99;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .prod-anch-nav::-webkit-scrollbar { display: none; }
+    .prod-anch-inner {
+      display: flex;
+      padding: 0 24px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .prod-anch-link {
+      padding: 14px 16px;
+      font-size: 0.73rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--gray);
+      white-space: nowrap;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      transition: color .2s, border-color .2s;
+      flex-shrink: 0;
+    }
+    .prod-anch-link:hover, .prod-anch-link.active {
+      color: var(--red);
+      border-bottom-color: var(--red);
+    }
+
+    /* ─── Badges normes ─── */
+    .norm-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+    .norm-badge {
+      display: inline-block;
+      font-size: 0.66rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--red);
+      border: 1px solid rgba(229,51,43,0.35);
+      background: rgba(229,51,43,0.05);
+      padding: 3px 10px;
+    }
+
+    /* ─── Tag catégorie ─── */
+    .prod-cat-tag {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 4px 12px;
+      margin-bottom: 14px;
+    }
+
+    /* ─── Grille specs ─── */
+    .spec-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--gray-light);
+      margin: 22px 0;
+      border: 1px solid var(--gray-light);
+    }
+    .spec-item { background: var(--gray-bg); padding: 11px 15px; }
+    .spec-label {
+      font-size: 0.64rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gray-mid);
+      display: block;
+      margin-bottom: 3px;
+    }
+    .spec-value {
+      font-size: 0.87rem;
+      font-weight: 600;
+      color: var(--dark);
+      line-height: 1.4;
+    }
+
+    /* ─── Callout réglementaire ─── */
+    .reg-callout {
+      background: rgba(229,51,43,0.05);
+      border-left: 4px solid var(--red);
+      padding: 14px 18px;
+      margin: 22px 0 0;
+    }
+    .reg-callout p { margin: 0; font-size: 0.85rem; line-height: 1.72; color: var(--dark-gray); }
+    .reg-callout strong { color: var(--dark); }
+
+    /* ─── Image produit ─── */
+    .prod-img-wrap { position: relative; overflow: hidden; }
+    .prod-img-wrap img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+      transition: transform .5s ease;
+    }
+    .prod-img-wrap:hover img { transform: scale(1.04); }
+    .prod-img-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(28,31,35,.75));
+      padding: 28px 16px 14px;
+    }
+    .prod-img-overlay span {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,.75);
+    }
+
+    /* ─── Lien interne produit ─── */
+    .prod-link-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 18px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid var(--red);
+      padding-bottom: 2px;
+      transition: opacity .2s;
+    }
+    .prod-link-inline:hover { opacity: .7; color: var(--red); }
+
+    /* ─── Section overview cards (intro) ─── */
+    .prod-overview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+    .prod-ov-card {
+      background: var(--white);
+      border: 1px solid var(--gray-light);
+      padding: 22px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      text-decoration: none;
+      transition: all .25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .prod-ov-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--red);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .25s;
+    }
+    .prod-ov-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: transparent; }
+    .prod-ov-card:hover::after { transform: scaleX(1); }
+    .prod-ov-num {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--red);
+      opacity: .15;
+      line-height: 1;
+      flex-shrink: 0;
+      min-width: 36px;
+    }
+    .prod-ov-body h4 { font-size: .92rem; margin-bottom: 4px; color: var(--dark); }
+    .prod-ov-body p { font-size: .78rem; color: var(--gray); margin: 0; line-height: 1.55; }
+
+    /* ─── Scroll margin pour les ancres ─── */
+    .product-detail { scroll-margin-top: 162px; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 1024px) {
+      .prod-overview-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .prod-anch-nav { top: 72px; }
+      .product-detail { scroll-margin-top: 120px; }
+      .spec-grid { grid-template-columns: 1fr; }
+      .prod-overview-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .prod-overview-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-left">
+          <div class="header-top-item"><span>Parc d'Activités de Taure — 31880 La Salvetat St Gilles</span></div>
+        </div>
+        <div class="header-top-right">
+          <a href="tel:0534257462" class="header-top-item" style="color:#fff;font-weight:700;"><span>05 34 25 74 62</span></a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-container">
+      <a href="index-new.html" class="logo"><img src="logopsl - original - transparent.jpg" alt="PSL Sécurité Incendie — La Salvetat St Gilles"></a>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="index-new.html" class="nav-link">Accueil</a></li>
+        <li class="nav-item"><a href="notre-activite.html" class="nav-link">Notre activité</a></li>
+        <li class="nav-item">
+          <a href="nos-produits.html" class="nav-link has-dropdown active">Nos produits</a>
+          <div class="mega-menu">
+            <a href="#plans" class="mega-menu-item"><div class="mega-menu-text"><h4>Plans de sécurité incendie</h4><p>Évacuation, intervention, chambre</p></div></a>
+            <a href="#signaletique" class="mega-menu-item"><div class="mega-menu-text"><h4>Signalétique</h4><p>Consignes, pictos, panneaux</p></div></a>
+            <a href="#extincteurs" class="mega-menu-item"><div class="mega-menu-text"><h4>Extincteurs</h4><p>Eau, poudre, CO2 — certifiés NF/CE</p></div></a>
+            <a href="#ria" class="mega-menu-item"><div class="mega-menu-text"><h4>RIA</h4><p>Robinets d'Incendie Armés</p></div></a>
+            <a href="#blocs" class="mega-menu-item"><div class="mega-menu-text"><h4>Blocs autonomes</h4><p>Standard, SATI, anti-panique</p></div></a>
+            <a href="#alarmes" class="mega-menu-item"><div class="mega-menu-text"><h4>Alarmes incendie</h4><p>Type 4, déclencheurs, sirènes</p></div></a>
+            <a href="#accessoires" class="mega-menu-item"><div class="mega-menu-text"><h4>Accessoires</h4><p>Colonnes sèches, registres, bacs</p></div></a>
+            <a href="#securite-personnes" class="mega-menu-item"><div class="mega-menu-text"><h4>Sécurité des personnes</h4><p>EPI, trousses, défibrillateur</p></div></a>
+            <a href="#protection-domestique" class="mega-menu-item"><div class="mega-menu-text"><h4>Protection domestique</h4><p>Détecteurs, extincteurs, couvertures</p></div></a>
+            <a href="extincteurs-sans-fluor.html" class="mega-menu-item"><div class="mega-menu-text"><h4>Transition PFAS</h4><p>Extincteurs sans fluor et conformité 2030</p></div></a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="nos-services.html" class="nav-link">Nos services</a></li>
+        <li class="nav-item">
+          <a href="les-normes.html" class="nav-link has-dropdown">Les normes</a>
+          <div class="dropdown-menu">
+            <a href="les-normes.html#societe" class="dropdown-link">Une société</a>
+            <a href="les-normes.html#collectivite" class="dropdown-link">Une collectivité</a>
+            <a href="les-normes.html#syndic" class="dropdown-link">Un syndic</a>
+            <a href="les-normes.html#commercant" class="dropdown-link">Un commerçant</a>
+            <a href="les-normes.html#batiment" class="dropdown-link">Une entreprise du bâtiment</a>
+            <a href="les-normes.html#particulier" class="dropdown-link">Un particulier</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary btn-sm nav-cta">
+        Demande de devis
+        <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L11.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 11-1.04-1.08l3.158-2.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+      </a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+
+  <!-- ========== PAGE HERO ========== -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="container">
+      <nav class="page-breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index-new.html">Accueil</a>
+        <span>/</span>
+        <strong>Nos produits</strong>
+      </nav>
+      <span class="page-hero-eyebrow">Catalogue PSL — 9 gammes</span>
+      <h1>Matériel de sécurité incendie<br>certifié, livré, installé.</h1>
+      <p>Du plan d'évacuation aux extincteurs sans fluor, PSL propose toute la gamme incendie conforme aux normes françaises et européennes en vigueur — avec la garantie d'un seul interlocuteur pour votre établissement.</p>
+    </div>
+  </section>
+
+
+  <!-- ========== NAV ANCRES PRODUITS (sticky) ========== -->
+  <nav class="prod-anch-nav" aria-label="Navigation par catégorie">
+    <div class="prod-anch-inner">
+      <a href="#plans"               class="prod-anch-link">Plans</a>
+      <a href="#signaletique"        class="prod-anch-link">Signalétique</a>
+      <a href="#extincteurs"         class="prod-anch-link">Extincteurs</a>
+      <a href="#ria"                 class="prod-anch-link">RIA</a>
+      <a href="#blocs"               class="prod-anch-link">Blocs autonomes</a>
+      <a href="#alarmes"             class="prod-anch-link">Alarmes</a>
+      <a href="#accessoires"         class="prod-anch-link">Accessoires</a>
+      <a href="#securite-personnes"  class="prod-anch-link">Sécurité personnes</a>
+      <a href="#protection-domestique" class="prod-anch-link">Domestique</a>
+    </div>
+  </nav>
+
+
+  <!-- ========== VUE D'ENSEMBLE ========== -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-header center reveal" style="max-width:640px;margin:0 auto 48px;">
+        <span class="section-label">Catalogue complet</span>
+        <h2 class="section-title">Toute la gamme incendie<br>sous un même toit</h2>
+        <p class="section-subtitle">9 familles de produits, des normes strictement respectées, une expertise de 20 ans. Cliquez sur une catégorie pour accéder au détail.</p>
+      </div>
+
+      <div class="prod-overview-grid">
+        <a href="#plans" class="prod-ov-card reveal stagger-1">
+          <div class="prod-ov-num">01</div>
+          <div class="prod-ov-body">
+            <h4>Plans de sécurité incendie</h4>
+            <p>Évacuation, intervention pompiers, chambre. Fabrication sur mesure NF X 08-070.</p>
+          </div>
+        </a>
+        <a href="#signaletique" class="prod-ov-card reveal stagger-2">
+          <div class="prod-ov-num">02</div>
+          <div class="prod-ov-body">
+            <h4>Signalétique incendie</h4>
+            <p>Pictogrammes, consignes, panneaux photoluminescents. NF EN ISO 7010.</p>
+          </div>
+        </a>
+        <a href="#extincteurs" class="prod-ov-card reveal stagger-3">
+          <div class="prod-ov-num">03</div>
+          <div class="prod-ov-body">
+            <h4>Extincteurs</h4>
+            <p>Eau + additif, poudre ABC, CO2, sur roue. Certifiés NF EN 3, marquage CE.</p>
+          </div>
+        </a>
+        <a href="#ria" class="prod-ov-card reveal stagger-4">
+          <div class="prod-ov-num">04</div>
+          <div class="prod-ov-body">
+            <h4>RIA</h4>
+            <p>Robinets d'Incendie Armés DN19, DN25, DN33 en 20 m et 30 m. NF EN 671-1.</p>
+          </div>
+        </a>
+        <a href="#blocs" class="prod-ov-card reveal stagger-5">
+          <div class="prod-ov-num">05</div>
+          <div class="prod-ov-body">
+            <h4>Blocs autonomes (BAES)</h4>
+            <p>Évacuation, SATI auto-testable, anti-panique, locaux à sommeil. NF EN 60598-2-22.</p>
+          </div>
+        </a>
+        <a href="#alarmes" class="prod-ov-card reveal stagger-6">
+          <div class="prod-ov-num">06</div>
+          <div class="prod-ov-body">
+            <h4>Alarmes incendie</h4>
+            <p>Alarmes type 4, déclencheurs manuels, diffuseurs sonores. NF S 61-936.</p>
+          </div>
+        </a>
+        <a href="#accessoires" class="prod-ov-card reveal stagger-1">
+          <div class="prod-ov-num">07</div>
+          <div class="prod-ov-body">
+            <h4>Accessoires incendie</h4>
+            <p>Colonnes sèches, bacs à sable, couvertures anti-feu, registres de sécurité.</p>
+          </div>
+        </a>
+        <a href="#securite-personnes" class="prod-ov-card reveal stagger-2">
+          <div class="prod-ov-num">08</div>
+          <div class="prod-ov-body">
+            <h4>Sécurité des personnes</h4>
+            <p>EPI, trousses de secours, défibrillateurs automatisés externes (DAE).</p>
+          </div>
+        </a>
+        <a href="#protection-domestique" class="prod-ov-card reveal stagger-3">
+          <div class="prod-ov-num">09</div>
+          <div class="prod-ov-body">
+            <h4>Protection domestique</h4>
+            <p>DAAF obligatoires depuis 2015, extincteurs, couvertures anti-feu pour particuliers.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== DÉTAILS PRODUITS ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="page-layout">
+
+        <!-- ─── CONTENU PRINCIPAL ─── -->
+        <div>
+
+          <!-- ══════════════════════════
+               01 — PLANS DE SÉCURITÉ
+               ══════════════════════════ -->
+          <div id="plans" class="product-detail reveal">
+            <div class="product-detail-inner">
+              <div>
+                <span class="prod-cat-tag">01 — Plans</span>
+                <div class="norm-badges">
+                  <span class="norm-badge">NF X 08-070</span>
+                  <span class="norm-badge">Obligation ERP & IGH</span>
+                  <span class="norm-badge">Fabrication sur mesure</span>
+                </div>
+                <h3>Plans d'évacuation &amp; d'intervention :<br>la fondation de votre sécurité incendie</h3>
+                <p>En cas d'incendie, chaque seconde compte. Un plan de sécurité clair et à jour permet à chaque occupant — personnel, client, résident — de trouver immédiatement la sortie la plus proche et au service d'intervention de localiser tous les moyens de lutte. <strong>Obligatoire dans l'ensemble des ERP, IGH et locaux de travail</strong>, le plan doit être conforme à la norme NF X 08-070 (qui remplace la NF S 60-303), mis à jour à chaque modification des locaux et affiché à chaque niveau, à proximité des accès.</p>
+                <p>PSL conçoit vos plans à partir de vos plans de bâtiment (PDF, DWG, esquisse papier ou visite terrain), intègre l'intégralité des informations réglementaires et vous livre un document prêt à l'affichage dans le support de votre choix.</p>
+
+                <h4 style="margin:22px 0 12px;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;color:var(--gray-mid);">Nos plans disponibles</h4>
+                <ul class="product-sub-list">
+                  <li><strong>Plan d'évacuation</strong> — voies de dégagement, sorties de secours, point de rassemblement, emplacements extincteurs et RIA</li>
+                  <li><strong>Plan d'intervention pompiers</strong> — coupes des fluides, colonnes sèches, locaux à risques, adresse des commandes de sécurité incendie</li>
+                  <li><strong>Plan de chambre</strong> — pour hôtels, EHPAD, résidences étudiantes — voies de sortie depuis chaque chambre</li>
+                  <li><strong>Consignes générales &amp; spécifiques</strong> — rédigées selon votre activité et le type d'établissement</li>
+                </ul>
+
+                <div class="spec-grid">
+                  <div class="spec-item"><span class="spec-label">Formats disponibles</span><span class="spec-value">A4 — A3 — A2 — A1 — A0</span></div>
+                  <div class="spec-item"><span class="spec-label">Supports</span><span class="spec-value">Plastifié, encadré PVC, plexi, aluminium, adhésif vinyle</span></div>
+                  <div class="spec-item"><span class="spec-label">Norme de référence</span><span class="spec-value">NF X 08-070 (déc. 2023)</span></div>
+                  <div class="spec-item"><span class="spec-label">Délai de fabrication</span><span class="spec-value">5 à 7 jours ouvrés</span></div>
+                </div>
+
+                <div class="reg-callout">
+                  <p><strong>Obligation réglementaire :</strong> tout ERP et tout local de travail doit disposer de plans de sécurité incendie affichés par niveau, à proximité des escaliers et des accès principaux. En l'absence de plan ou en cas de plan non conforme, votre responsabilité civile et pénale est engagée.</p>
+                </div>
+                <a href="contact.html" class="prod-link-inline">Demander un plan sur mesure →</a>
+              </div>
+
+              <div>
+                <div class="prod-img-wrap">
+                  <img src="Image/PEVAC.png" alt="Plan d'évacuation incendie conforme NF X 08-070 — PSL">
+                  <div class="prod-img-overlay"><span>Plans sur mesure — PSL</span></div>
+                </div>
+                <div style="background:var(--gray-bg);padding:20px;margin-top:2px;">
+                  <p style="font-size:.82rem;color:var(--gray);margin:0;line-height:1.7;">
+                    <strong style="color:var(--dark);display:block;margin-bottom:6px;">Pourquoi choisir PSL pour vos plans ?</strong>
+                    Fabrication en atelier à La Salvetat St Gilles, techniciens formés à la réglementation incendie, relecture norme incluse. Mise à jour gratuite lors d'une maintenance PSL si vos équipements ont évolué.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ══════════════════════════
+               02 — SIGNALÉTIQUE
+               ══════════════════════════ -->
+          <div id="signaletique" class="product-detail reveal">
+            <div class="product-detail-inner reverse">
+              <div>
+                <span class="prod-cat-tag">02 — Signalétique</span>
+                <div class="norm-badges">
+                  <span class="norm-badge">NF EN ISO 7010</span>
+                  <span class="norm-badge">Photoluminescent</span>
+                  <span class="norm-badge">Obligation ERP</span>
+                </div>
+                <h3>Signalétique de sécurité incendie :<br>visible, durable, conforme</h3>
+                <p>La signalétique incendie est le fil d'Ariane qui guide vos occupants vers la sortie — même en conditions de fumée, même en panique. Chaque panneau, chaque pictogramme doit être <strong>normalisé selon la NF EN ISO 7010</strong>, correctement positionné et maintenu lisible. Une signalisation déficiente ou non conforme expose votre établissement à des sanctions lors des visites de la commission de sécurité.</p>
+                <p>PSL vous fournit l'intégralité de la signalétique obligatoire et complémentaire : des consignes personnalisées à votre activité aux panneaux photoluminescents rechargés par la lumière ambiante, visibles jusqu'à 30 minutes après extinction des feux.</p>
+
+                <h4 style="margin:22px 0 12px;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;color:var(--gray-mid);">Nos références signalétique</h4>
+                <ul class="product-sub-list">
+                  <li><strong>Panneaux extincteurs</strong> — repérage obligatoire de chaque appareil (NF EN ISO 7010 — F001)</li>
+                  <li><strong>Panneaux RIA</strong> — balisage des robinets d'incendie armés</li>
+                  <li><strong>Signalisation photoluminescente</strong> — flèches directionnelles, sorties de secours, points de rassemblement</li>
+                  <li><strong>Consignes générales</strong> — "En cas d'incendie" avec pictogrammes NF</li>
+                  <li><strong>Consignes personnalisées</strong> — adaptées à votre activité (hôtel, industrie, ERP spécialisé)</li>
+                  <li><strong>Panneaux interdiction de fumer</strong> et zones ATEX si nécessaire</li>
+                  <li><strong>Balisage des issues de secours</strong> — conforme à la réglementation ERP/IGH</li>
+                </ul>
+
+                <div class="spec-grid">
+                  <div class="spec-item"><span class="spec-label">Norme pictogrammes</span><span class="spec-value">NF EN ISO 7010</span></div>
+                  <div class="spec-item"><span class="spec-label">Matériaux</span><span class="spec-value">Rigide PVC, aluminium, adhésif vinyle, photoluminescent</span></div>
+                  <div class="spec-item"><span class="spec-label">Durabilité photo-lumi</span><span class="spec-value">&gt; 10 ans en intérieur</span></div>
+                  <div class="spec-item"><span class="spec-label">Formats</span><span class="spec-value">De A5 à A0 selon les supports</span></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="prod-img-wrap">
+                  <img src="Image/SIGNA.png" alt="Signalétique incendie photoluminescente NF EN ISO 7010 — PSL">
+                  <div class="prod-img-overlay"><span>Signalétique — PSL</span></div>
+                </div>
+                <div class="reg-callout" style="margin-top:2px;">
+                  <p><strong>À savoir :</strong> depuis 2013, tous les panneaux de sécurité doivent utiliser les pictogrammes de la NF EN ISO 7010. Les anciennes consignes avec des pictogrammes non conformes doivent être remplacées.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ══════════════════════════
+               03 — EXTINCTEURS
+               ══════════════════════════ -->
+          <div id="extincteurs" class="product-detail reveal">
+            <div class="product-detail-inner">
+              <div>
+                <span class="prod-cat-tag">03 — Extincteurs</span>
+                <div class="norm-badges">
+                  <span class="norm-badge">NF EN 3</span>
+                  <span class="norm-badge">Marquage CE</span>
+                  <span class="norm-badge">Vérification annuelle obligatoire</span>
+                </div>
+                <h3>Extincteurs certifiés NF :<br>le bon agent pour chaque classe de feu</h3>
+                <p>L'extincteur portatif est le <strong>premier moyen d'intervention</strong> entre la découverte d'un départ de feu et l'arrivée des secours. Son efficacité dépend entièrement d'un choix adapté : le mauvais agent extincteur peut être inefficace, voire dangereux (eau sur feu électrique, CO2 en espace confiné non ventilé). PSL vous guide dans le choix de l'équipement le mieux adapté à vos risques et à la configuration de vos locaux.</p>
+                <p>Tous nos extincteurs sont certifiés <strong>NF EN 3</strong>, marqués CE, et livrés avec leur étiquette réglementaire. La vérification annuelle par un technicien qualifié est obligatoire (Art. R4227-39 du Code du Travail, norme NF S 61-920).</p>
+
+                <h4 style="margin:22px 0 12px;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;color:var(--gray-mid);">Notre gamme extincteurs</h4>
+                <ul class="product-sub-list">
+                  <li><strong>Extincteur eau + additif</strong> — classes A et B. Idéal feux de matières solides et liquides. 6 L et 9 L. Usage général en bureaux, commerces, hôtels.</li>
+                  <li><strong>Extincteur poudre ABC</strong> — classes A, B et C. Feux solides, liquides et gaz. De 1 kg à 9 kg. Très polyvalent, à positionner dans locaux avec risques gaz ou véhicules.</li>
+                  <li><strong>Extincteur CO2</strong> — classes B et feux électriques. Sans résidu, indispensable en salle informatique, tableau électrique, labo. 2 kg et 5 kg.</li>
+                  <li><strong>Extincteur sur roue</strong> — 25 L à 50 kg pour sites industriels, entrepôts, ateliers à fort potentiel calorifique.</li>
+                  <li><strong>Extincteur eau pulvérisée avec additif</strong> — classes A, B et feux de cuisine (classe F). Adapté aux restaurants et cuisines professionnelles.</li>
+                </ul>
+
+                <div class="spec-grid">
+                  <div class="spec-item"><span class="spec-label">Certification</span><span class="spec-value">NF EN 3 — Marquage CE</span></div>
+                  <div class="spec-item"><span class="spec-label">Capacités</span><span class="spec-value">1 kg/L à 50 kg/L selon type</span></div>
+                  <div class="spec-item"><span class="spec-label">Vérification réglementaire</span><span class="spec-value">Annuelle (NF S 61-920 / Art. R4227-39)</span></div>
+                  <div class="spec-item"><span class="spec-label">Révision</span><span class="spec-value">Tous les 5 ou 10 ans selon constructeur</span></div>
+                </div>
+
+                <div class="reg-callout">
+                  <p><strong>Transition PFAS :</strong> depuis 2023, les extincteurs à mousses fluorées (AFFF, FFFP) sont interdits à la vente. PSL propose l'ensemble des agents extincteurs sans PFAS (sans fluor) conformes à la réglementation 2030. <a href="extincteurs-sans-fluor.html" style="color:var(--red);font-weight:600;">Voir la page dédiée →</a></p>
+                </div>
+              </div>
+
+              <div>
+                <div class="prod-img-wrap">
+                  <img src="Image/EXT.JPG" alt="Extincteurs sécurité incendie certifiés NF EN 3 — PSL La Salvetat St Gilles">
+                  <div class="prod-img-overlay"><span>Extincteurs certifiés NF — PSL</span></div>
+                </div>
+                <div style="background:var(--gray-bg);padding:20px;margin-top:2px;">
+                  <p style="font-size:.82rem;color:var(--gray);margin:0;line-height:1.7;">
+                    <strong style="color:var(--dark);display:block;margin-bottom:6px;">Règle de base pour l'implantation :</strong>
+                    En ERP, au minimum 1 extincteur pour 200 à 300 m² selon la classe de risque, et jamais à plus de 15 m d'un poste de travail. PSL réalise un audit d'implantation gratuit lors de toute intervention.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ══════════════════════════
+               04 — RIA
+               ══════════════════════════ -->
+          <div id="ria" class="product-detail reveal">
+            <div class="product-detail-inner reverse">
+              <div>
+                <span class="prod-cat-tag">04 — RIA</span>
+                <div class="norm-badges">
+                  <span class="norm-badge">NF EN 671-1</span>
+                  <span class="norm-badge">Maintenance NF EN 671-3</span>
+                  <span class="norm-badge">ERP catégories 1 à 4</span>
+                </div>
+                <h3>Robinets d'Incendie Armés :<br>l'eau au bon endroit, au bon débit</h3>
+                <p>Le RIA est un moyen d'extinction permanent, connecté directement au réseau hydraulique du bâtiment. Contrairement à l'extincteur, il offre une <strong>alimentation continue en eau</strong> et permet d'intervenir sur des surfaces bien plus importantes. Obligatoire dans les ERP de catégories 1 à 4 selon leur activité, il constitue un maillon essentiel du dispositif de sécurité actif.</p>
+                <p>PSL vous fournit les RIA, les dévidoirs et l'ensemble des accessoires hydrauliques. Nos techniciens assurent l'installation, la mise en eau et la vérification annuelle réglementaire conforme à la norme NF EN 671-3, ainsi que l'épreuve quinquennale des tuyaux.</p>
+
+                <h4 style="margin:22px 0 12px;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;color:var(--gray-mid);">Gamme RIA disponible</h4>
+                <ul class="product-sub-list">
+                  <li><strong>RIA DN19</strong> — dévidoir à jet d'eau diffusé. Locaux à risques courants (potentiel calorifique &lt; 500 MJ/m²). Bureaux, commerces, hôtels.</li>
+                  <li><strong>RIA DN25</strong> — dévidoir semi-rigide. Locaux à risques moyens (PC 500–900 MJ/m²). Entrepôts légers, ateliers, restauration.</li>
+                  <li><strong>RIA DN33</strong> — tuyau souple grande capacité. Locaux à risques élevés. Industrie, stockage, sites classés ICPE.</li>
+                  <li><strong>Longueurs</strong> — 20 m et 30 m selon configuration du bâtiment</li>
+                  <li><strong>Dévidoirs</strong> — muraux fixes, pivotants 180°, sur pied mobile</li>
+                  <li><strong>Accessoires</strong> — robinets d'arrêt, vannes, raccords, manomètres, surpresseurs</li>
+                </ul>
+
+                <div class="spec-grid">
+                  <div class="spec-item"><span class="spec-label">Norme produit</span><span class="spec-value">NF EN 671-1</span></div>
+                  <div class="spec-item"><span class="spec-label">Diamètres</span><span class="spec-value">DN19 — DN25 — DN33</span></div>
+                  <div class="spec-item"><span class="spec-label">Maintenance annuelle</span><span class="spec-value">Obligatoire — NF EN 671-3</span></div>
+                  <div class="spec-item"><span class="spec-label">Épreuve tuyaux</span><span class="spec-value">Tous les 5 ans (12 bars DN19/25)</span></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="prod-img-wrap">
+                  <img src="Image/RIA.png" alt="Robinet d'Incendie Armé RIA DN25 conforme NF EN 671-1 — PSL">
+                  <div class="prod-img-overlay"><span>RIA — PSL</span></div>
+                </div>
+                <div class="reg-callout" style="margin-top:2px;">
+                  <p><strong>Obligation :</strong> la vérification annuelle des RIA est imposée par l'arrêté du 25 juin 1980 pour les ERP. Elle comprend le contrôle du débit, de la pression, de l'état du tuyau et des organes de manœuvre. PSL prend en charge ce suivi annuel dans le cadre d'un contrat d'entretien.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ══════════════════════════
+               05 — BLOCS AUTONOMES
+               ══════════════════════════ -->
+          <div id="blocs" class="product-detail reveal">
+            <div class="product-detail-inner">
+              <div>
+                <span class="prod-cat-tag">05 — Blocs autonomes</span>
+                <div class="norm-badges">
+                  <span class="norm-badge">NF EN 60598-2-22</span>
+                  <span class="norm-badge">NFC 71-800 / 71-801</span>
+                  <span class="norm-badge">NF C 71-820 SATI</span>
+                </div>
+                <h3>Blocs autonomes d'éclairage de sécurité :<br>guidez l'évacuation même dans l'obscurité</h3>
+                <p>En cas d'incendie, la coupure de l'éclairage normal est fréquente. Les BAES (Blocs Autonomes d'Éclairage de Sécurité) prennent alors le relais pour <strong>baliser les voies d'évacuation</strong> et prévenir les mouvements de panique. Leur présence est obligatoire dans tous les ERP, IGH et locaux de travail de plus de 50 personnes, et leur fonctionnement doit être vérifié régulièrement.</p>
+                <p>PSL vous fournit et installe la gamme complète de BAES adaptée à vos locaux : de l'éclairage d'évacuation standard aux systèmes SATI qui s'auto-testent automatiquement, supprimant le test manuel mensuel de votre charge de travail.</p>
+
+                <h4 style="margin:22px 0 12px;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;color:var(--gray-mid);">Gamme BAES disponible</h4>
+                <ul class="product-sub-list">
+                  <li><strong>BAES Évacuation standard</strong> — 45 lumens, autonomie 1 heure. Balisage des couloirs, escaliers et issues. (NFC 71-800)</li>
+                  <li><strong>BAES SATI auto-testable</strong> — système de test intégré automatique. Élimine le test manuel mensuel, génère des rapports d'état. (NF C 71-820)</li>
+                  <li><strong>BAES Anti-panique / ambiance</strong> — éclairage &ge; 1 lux sur toute la surface. Obligatoire dans salles &ge; 100 personnes (RdC) ou 50 (sous-sol). (NFC 71-801)</li>
+                  <li><strong>BAEH locaux à sommeil</strong> — hôtels, EHPAD, résidences. Autonomie 5 heures pour les chambres et couloirs. (NFC 71-805)</li>
+                </ul>
+
+                <div class="spec-grid">
+                  <div class="spec-item"><span class="spec-label">Norme produit</span><span class="spec-value">NF EN 60598-2-22</span></div>
+                  <div class="spec-item"><span class="spec-label">Autonomie minimale</span><span class="spec-value">1 heure (standard) / 5 heures (locaux à sommeil)</span></div>
+                  <div class="spec-item"><span class="spec-label">Vérification batterie</span><span class="spec-value">Semestrielle obligatoire</span></div>
+                  <div class="spec-item"><span class="spec-label">Vérification complète</span><span class="spec-value">Annuelle (registre de sécurité)</span></div>
+                </div>
+
+                <div class="reg-callout">
+                  <p><strong>Astuce réglementaire :</strong> les BAES SATI permettent un suivi automatique conforme sans mobiliser votre équipe. Chaque bloc génère en temps réel un signal d'anomalie. PSL vous propose la migration vers des BAES SATI lors du renouvellement de votre parc.</p>
+                </div>
+              </div>
+
+              <div>
+                <div class="prod-img-wrap">
+                  <img src="Image/BAES.jpg" alt="Blocs autonomes d'éclairage de sécurité BAES SATI — PSL">
+                  <div class="prod-img-overlay"><span>BAES & SATI — PSL</span></div>
+                </div>
+                <div style="background:var(--gray-bg);padding:20px;margin-top:2px;">
+                  <p style="font-size:.82rem;color:var(--gray);margin:0;line-height:1.7;">
+                    <strong style="color:var(--dark);display:block;margin-bottom:6px;">Télécommande et flux de mise en sécurité :</strong>
+                    Dans les ERP de catégories 1 et 2, le bloc doit être commandé par le SSI via un flux de mise en sécurité. PSL vérifie la compatibilité de vos BAES avec le système d'alarme existant.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ══════════════════════════
+               06 — ALARMES INCENDIE
+               ══════════════════════════ -->
+          <div id="alarmes" class="product-detail reveal">
+            <div class="product-detail-inner reverse">
+              <div>
+                <span class="prod-cat-tag">06 — Alarmes incendie</span>
+                <div class="norm-badges">
+                  <span class="norm-badge">NF S 61-936</span>
+                  <span class="norm-badge">Type 4</span>
+                  <span class="norm-badge">Test mensuel obligatoire</span>
+                </div>
+                <h3>Alarmes incendie :<br>déclenchez l'alerte avant qu'il ne soit trop tard</h3>
+                <p>L'alarme incendie est le <strong>premier maillon de la chaîne d'évacuation</strong>. Elle doit être entendue de tous, en tout point du bâtiment, pour permettre une évacuation rapide et ordonnée. La réglementation française impose le type d'alarme en fonction de la catégorie d'ERP et de l'activité exercée : du simple appareil autonome à piles pour un ERP de 5e catégorie, jusqu'au système SSI complet avec CMSI pour les grandes surfaces recevant du public.</p>
+                <p>PSL vous propose les équipements d'alarme de type 4 (le plus répandu dans les ERP de 5e catégorie et les locaux professionnels), ainsi que les accessoires nécessaires à leur bon fonctionnement et à la traçabilité réglementaire.</p>
+
+                <h4 style="margin:22px 0 12px;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;color:var(--gray-mid);">Nos équipements alarme</h4>
+                <ul class="product-sub-list">
+                  <li><strong>Alarme type 4 autonome</strong> — centrale à pile intégrant déclencheur manuel et diffuseur sonore &ge; 90 dB. ERP 5e catégorie et locaux professionnels.</li>
+                  <li><strong>Déclencheurs manuels (DM)</strong> — brise-glace ou poussoir. Pose réglementaire entre 1,10 m et 1,30 m, à proximité des sorties.</li>
+                  <li><strong>Diffuseurs sonores &amp; sirènes</strong> — 90 à 110 dB selon la surface et l'ambiance sonore du local.</li>
+                  <li><strong>Flash lumineux</strong> — signal lumineux pour personnes malentendantes, vestiaires, locaux bruyants.</li>
+                  <li><strong>Capots de protection</strong> — anti-vandalisme pour déclencheurs manuels exposés.</li>
+                  <li><strong>Boîtiers de report et télécommandes</strong> — report d'alarme en loge, standard ou poste de sécurité.</li>
+                </ul>
+
+                <div class="spec-grid">
+                  <div class="spec-item"><span class="spec-label">Norme de référence</span><span class="spec-value">NF S 61-936</span></div>
+                  <div class="spec-item"><span class="spec-label">Niveau sonore min.</span><span class="spec-value">&ge; 90 dB (A) à 1 mètre</span></div>
+                  <div class="spec-item"><span class="spec-label">Test obligatoire</span><span class="spec-value">Mensuel + registre de sécurité</span></div>
+                  <div class="spec-item"><span class="spec-label">Hauteur DM</span><span class="spec-value">Entre 1,10 m et 1,30 m du sol</span></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="prod-img-wrap">
+                  <img src="Image/ALARME.png" alt="Alarme incendie type 4 déclencheur manuel NF S 61-936 — PSL">
+                  <div class="prod-img-overlay"><span>Alarmes incendie — PSL</span></div>
+                </div>
+                <div class="reg-callout" style="margin-top:2px;">
+                  <p><strong>Registre de sécurité :</strong> chaque test mensuel, chaque remplacement de batterie, chaque intervention sur l'alarme doit être consigné dans le registre de sécurité. PSL assure le suivi documentaire dans le cadre de son contrat de maintenance annuelle.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ══════════════════════════
+               07 — ACCESSOIRES
+               ══════════════════════════ -->
+          <div id="accessoires" class="product-detail reveal">
+            <div class="product-detail-inner">
+              <div>
+                <span class="prod-cat-tag">07 — Accessoires incendie</span>
+                <div class="norm-badges">
+                  <span class="norm-badge">Colonnes sèches</span>
+                  <span class="norm-badge">Bacs à sable</span>
+                  <span class="norm-badge">Registres réglementaires</span>
+                </div>
+                <h3>Accessoires incendie :<br>les compléments indispensables à votre dispositif</h3>
+                <p>Au-delà des équipements principaux, votre installation incendie doit être complétée d'accessoires réglementaires ou opérationnels. Du registre de sécurité (document officiel que tout établissement doit tenir à jour) aux colonnes sèches destinées aux sapeurs-pompiers, PSL vous fournit l'ensemble de ces éléments pour assurer la <strong>complétude de votre dispositif</strong>.</p>
+
+                <h4 style="margin:22px 0 12px;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;color:var(--gray-mid);">Nos accessoires disponibles</h4>
+                <ul class="product-sub-list">
+                  <li><strong>Colonnes sèches</strong> — alimentation réservée aux sapeurs-pompiers. Obligatoires dans les bâtiments &ge; 7 niveaux ou répondant aux critères IGH. Raccordement instantané Ø 65 mm normalisé.</li>
+                  <li><strong>Bacs à sable</strong> — extinction des feux de classe D (métaux alcalins : sodium, potassium, magnésium) et absorption de liquides inflammables. Capacités de 25 L à 100 L.</li>
+                  <li><strong>Couvertures anti-feu</strong> — étouffement de petits feux (classe F — huiles de cuisson, bougies, vêtements en feu). Standard EN 1869.</li>
+                  <li><strong>Bacs à eau</strong> — réserves d'appoint pour extinction naturelle dans locaux sans eau courante.</li>
+                  <li><strong>Registres de sécurité incendie</strong> — cahiers officiels pour consigner vérifications, incidents et travaux. Obligation légale pour tous les ERP et locaux de travail.</li>
+                  <li><strong>Ouvrants de désenfumage</strong> — entrebâilleurs, crémones et accessoires pour volets et lanterneaux de désenfumage naturel.</li>
+                  <li><strong>Panneaux signalétiques colonnes sèches</strong> — balisage des prises d'alimentation et de refoulement.</li>
+                </ul>
+
+                <div class="spec-grid">
+                  <div class="spec-item"><span class="spec-label">Bacs à sable</span><span class="spec-value">25 L — 50 L — 100 L</span></div>
+                  <div class="spec-item"><span class="spec-label">Couvertures</span><span class="spec-value">Standard EN 1869 — 1,2 × 1,8 m</span></div>
+                  <div class="spec-item"><span class="spec-label">Registres</span><span class="spec-value">ERP, Code du Travail, IGH</span></div>
+                  <div class="spec-item"><span class="spec-label">Colonnes sèches</span><span class="spec-value">Ø 65 mm — Norme NF S 61-702</span></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="prod-img-wrap">
+                  <img src="Image/CS.jpg" alt="Colonne sèche et accessoires incendie — PSL La Salvetat St Gilles">
+                  <div class="prod-img-overlay"><span>Accessoires incendie — PSL</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ══════════════════════════
+               08 — SÉCURITÉ DES PERSONNES
+               ══════════════════════════ -->
+          <div id="securite-personnes" class="product-detail reveal">
+            <div class="product-detail-inner reverse">
+              <div>
+                <span class="prod-cat-tag">08 — Sécurité des personnes</span>
+                <div class="norm-badges">
+                  <span class="norm-badge">EPI obligatoires</span>
+                  <span class="norm-badge">DAE/DEA</span>
+                  <span class="norm-badge">Premiers secours</span>
+                </div>
+                <h3>Équipements de sécurité des personnes :<br>protégez vos collaborateurs au-delà de l'incendie</h3>
+                <p>La sécurité incendie ne se limite pas à éteindre les flammes : elle inclut la <strong>protection physique des personnes</strong> lors d'une intervention ou d'une évacuation, et la capacité à prodiguer les premiers secours avant l'arrivée du SAMU. Depuis 2019, l'installation d'un défibrillateur automatisé externe (DAE) est rendue obligatoire dans un nombre croissant d'établissements recevant du public.</p>
+
+                <h4 style="margin:22px 0 12px;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;color:var(--gray-mid);">Notre gamme sécurité personnes</h4>
+                <ul class="product-sub-list">
+                  <li><strong>Trousses de premiers secours</strong> — conformes aux recommandations de l'INRS. Standard, murale, portable selon effectif et activité.</li>
+                  <li><strong>Défibrillateurs automatisés externes (DAE)</strong> — entièrement automatiques, utilisables par toute personne même non formée. Obligatoires dans les ERP de catégories 1 à 3 depuis 2022.</li>
+                  <li><strong>Armoires à pharmacie</strong> — murales, verrouillables, répertoriées dans le registre de sécurité.</li>
+                  <li><strong>EPI intervention incendie</strong> — gants résistants à la chaleur, lunettes de protection, casques, combinaisons ignifugées pour les équipiers de première intervention.</li>
+                  <li><strong>Signalétique premiers secours</strong> — balisage des trousses et DAE selon NF EN ISO 7010.</li>
+                </ul>
+
+                <div class="spec-grid">
+                  <div class="spec-item"><span class="spec-label">DAE — obligation</span><span class="spec-value">ERP cat. 1 à 3 depuis janv. 2022</span></div>
+                  <div class="spec-item"><span class="spec-label">Trousses</span><span class="spec-value">INRS ED6054 — adaptées à l'effectif</span></div>
+                  <div class="spec-item"><span class="spec-label">EPI</span><span class="spec-value">Directive 89/686/CEE</span></div>
+                  <div class="spec-item"><span class="spec-label">Contrôle DAE</span><span class="spec-value">Vérification mensuelle + registre</span></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="prod-img-wrap">
+                  <img src="Image/OUVRANTS.jpg" alt="Équipements de sécurité des personnes EPI trousse secours DAE — PSL">
+                  <div class="prod-img-overlay"><span>Sécurité des personnes — PSL</span></div>
+                </div>
+                <div class="reg-callout" style="margin-top:2px;">
+                  <p><strong>Bon à savoir :</strong> le DAE doit être placé dans un endroit signalé, facilement accessible 24h/24, et son emplacement communiqué au service d'aide médicale urgente (SAMU / 15). PSL se charge du balisage et de l'enregistrement auprès des services compétents.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ══════════════════════════
+               09 — PROTECTION DOMESTIQUE
+               ══════════════════════════ -->
+          <div id="protection-domestique" class="product-detail reveal" style="border-bottom:none;">
+            <div class="product-detail-inner">
+              <div>
+                <span class="prod-cat-tag">09 — Protection domestique</span>
+                <div class="norm-badges">
+                  <span class="norm-badge">DAAF obligatoire depuis 2015</span>
+                  <span class="norm-badge">Particuliers</span>
+                  <span class="norm-badge">Logements</span>
+                </div>
+                <h3>Protection incendie pour particuliers :<br>la maison aussi a ses obligations</h3>
+                <p>Depuis la loi du 9 mars 2010 et son décret d'application du 11 décembre 2011, <strong>tout logement doit être équipé d'au moins un DAAF</strong> (Détecteur Avertisseur Autonome de Fumée). Cette obligation, entrée en vigueur le 8 mars 2015, s'applique à tous les logements en France — propriétaires comme locataires. PSL vous propose une gamme complète d'équipements pour sécuriser votre domicile au-delà du simple détecteur réglementaire.</p>
+
+                <h4 style="margin:22px 0 12px;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;color:var(--gray-mid);">Nos produits pour particuliers</h4>
+                <ul class="product-sub-list">
+                  <li><strong>DAAF (Détecteur Avertisseur Autonome de Fumée)</strong> — conforme NF EN 14604. Alarme sonore &ge; 85 dB. À poser au plafond de chaque logement, idéalement dans le couloir desservant les chambres.</li>
+                  <li><strong>Extincteurs domestiques</strong> — 1 L à 2 L eau + additif pour cuisine, garage, salon. Légers, maniables, sans risque de dégradation des meubles.</li>
+                  <li><strong>Couvertures anti-feu</strong> — indispensable en cuisine pour éteindre une casserole en feu (classe F). À portée de main, proche de la gazinière.</li>
+                  <li><strong>Kits de sécurité maison</strong> — pack complet comprenant DAAF + extincteur 1 L + couverture anti-feu + guide des bons réflexes.</li>
+                </ul>
+
+                <div class="spec-grid">
+                  <div class="spec-item"><span class="spec-label">DAAF — norme</span><span class="spec-value">NF EN 14604 — Loi du 9 mars 2010</span></div>
+                  <div class="spec-item"><span class="spec-label">Autonomie pile DAAF</span><span class="spec-value">5 à 10 ans selon modèle</span></div>
+                  <div class="spec-item"><span class="spec-label">Couverture anti-feu</span><span class="spec-value">EN 1869 — dimensions 1,2 × 1,8 m</span></div>
+                  <div class="spec-item"><span class="spec-label">Extincteur domestique</span><span class="spec-value">1 L à 2 L — eau + additif</span></div>
+                </div>
+
+                <div class="reg-callout">
+                  <p><strong>Responsabilité :</strong> en cas de location, c'est au locataire d'installer le DAAF, mais au propriétaire de fournir le logement avec les conditions permettant son installation et d'en assurer le renouvellement en cas de panne non imputable au locataire. En copropriété, les parties communes sont sous la responsabilité du syndic.</p>
+                </div>
+              </div>
+
+              <div>
+                <div class="prod-img-wrap">
+                  <img src="Image/STFOYEXT.jpg" alt="Protection incendie domestique DAAF extincteur particuliers — PSL">
+                  <div class="prod-img-overlay"><span>Protection domestique — PSL</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- fin contenu principal -->
+
+
+        <!-- ─── SIDEBAR ─── -->
+        <aside class="page-sidebar">
+          <div class="sidebar-widget">
+            <h4>Catégories produits</h4>
+            <ul class="sidebar-nav-list" id="sidebarNav">
+              <li><a href="#plans">Plans de sécurité incendie <span>→</span></a></li>
+              <li><a href="#signaletique">Signalétique <span>→</span></a></li>
+              <li><a href="#extincteurs">Extincteurs <span>→</span></a></li>
+              <li><a href="#ria">RIA <span>→</span></a></li>
+              <li><a href="#blocs">Blocs autonomes (BAES) <span>→</span></a></li>
+              <li><a href="#alarmes">Alarmes incendie <span>→</span></a></li>
+              <li><a href="#accessoires">Accessoires <span>→</span></a></li>
+              <li><a href="#securite-personnes">Sécurité des personnes <span>→</span></a></li>
+              <li><a href="#protection-domestique">Protection domestique <span>→</span></a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-cta">
+            <h4>Besoin d'un devis ?</h4>
+            <p>Un seul interlocuteur pour tout votre matériel incendie. Réponse sous 24h.</p>
+            <a href="contact.html">Demander un devis gratuit</a>
+          </div>
+
+          <div class="sidebar-widget" style="margin-top:16px;">
+            <h4>Normes clés</h4>
+            <ul class="sidebar-nav-list">
+              <li><a href="les-normes.html">NF X 08-070 — Plans <span>→</span></a></li>
+              <li><a href="les-normes.html">NF EN 3 — Extincteurs <span>→</span></a></li>
+              <li><a href="les-normes.html">NF EN 671-1 — RIA <span>→</span></a></li>
+              <li><a href="les-normes.html">NF EN 60598-2-22 — BAES <span>→</span></a></li>
+              <li><a href="les-normes.html">NF S 61-936 — Alarmes <span>→</span></a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-widget" style="margin-top:16px;background:var(--dark);">
+            <h4 style="color:rgba(255,255,255,.5);border-bottom-color:rgba(255,255,255,.1);">Transition PFAS 2030</h4>
+            <p style="font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.7;margin-bottom:14px;">Les extincteurs à mousse fluorée sont interdits à la vente depuis 2023. Anticiper la mise en conformité, c'est éviter une pénurie.</p>
+            <a href="extincteurs-sans-fluor.html" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;font-size:.75rem;">Voir les extincteurs sans fluor</a>
+          </div>
+        </aside>
+
+      </div><!-- fin page-layout -->
+    </div>
+  </section>
+
+
+  <!-- ========== CTA ========== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-content">
+          <span class="section-label">Prêt à agir ?</span>
+          <h2>Un audit de vos équipements, gratuit et sans engagement</h2>
+          <p>PSL intervient sur l'ensemble de la Haute-Garonne (31) et des départements limitrophes. Nos techniciens analysent votre situation, identifient les non-conformités et vous proposent un plan d'équipement adapté à votre budget et à vos obligations réglementaires.</p>
+          <a href="contact.html" class="btn btn-primary btn-lg" style="margin-right:14px;">
+            Demander un devis
+            <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L11.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 11-1.04-1.08l3.158-2.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+          </a>
+          <div class="cta-phone">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6.75Z"/></svg>
+            05 34 25 74 62
+          </div>
+        </div>
+        <div class="cta-form">
+          <h3>Demande de devis rapide</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Nom / Société</label><input type="text" placeholder="Votre nom ou société"></div>
+            <div class="form-group"><label>Téléphone</label><input type="tel" placeholder="06 XX XX XX XX"></div>
+          </div>
+          <div class="form-group">
+            <label>Vous avez besoin de</label>
+            <select>
+              <option>Plans d'évacuation</option>
+              <option>Extincteurs</option>
+              <option>RIA</option>
+              <option>Blocs autonomes (BAES)</option>
+              <option>Alarmes incendie</option>
+              <option>Signalétique</option>
+              <option>Maintenance / vérification</option>
+              <option>Plusieurs équipements</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Message (optionnel)</label><textarea placeholder="Décrivez brièvement votre établissement ou vos besoins…"></textarea></div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;" onclick="window.location='contact.html'">Envoyer la demande →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="Image/LOGOTRANSPARENT.png" alt="PSL Sécurité Incendie"></div>
+          <p>Parc d'Activités de Taure<br>25 avenue Léonard de Vinci<br>31880 La Salvetat St Gilles</p>
+          <p style="margin-top:14px;"><strong style="color:var(--white);">Tél : 05 34 25 74 62</strong></p>
+        </div>
+        <div class="footer-col">
+          <h4>Produits</h4>
+          <ul class="footer-links">
+            <li><a href="#plans">Plans de sécurité incendie</a></li>
+            <li><a href="#signaletique">Signalétique</a></li>
+            <li><a href="#extincteurs">Extincteurs</a></li>
+            <li><a href="#ria">RIA</a></li>
+            <li><a href="#blocs">Blocs autonomes</a></li>
+            <li><a href="#alarmes">Alarmes incendie</a></li>
+            <li><a href="extincteurs-sans-fluor.html">Extincteurs sans fluor</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index-new.html">Accueil</a></li>
+            <li><a href="notre-activite.html">Notre activité</a></li>
+            <li><a href="nos-services.html">Nos services</a></li>
+            <li><a href="les-normes.html">Les normes</a></li>
+            <li><a href="contact.html">Contact &amp; Devis</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Informations</h4>
+          <ul class="footer-links">
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Plan du site</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© PSL — Sécurité Incendie — Tous droits réservés</div>
+        <div class="footer-bottom-links"><a href="#">Mentions légales</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // ─── Active state anchor nav (produits) ───
+    (function () {
+      var anchLinks = document.querySelectorAll('.prod-anch-link');
+      var sections = ['plans','signaletique','extincteurs','ria','blocs','alarmes','accessoires','securite-personnes','protection-domestique'];
+
+      function setActive() {
+        var scrollY = window.pageYOffset + 200;
+        var current = '';
+        sections.forEach(function(id) {
+          var el = document.getElementById(id);
+          if (el && el.offsetTop <= scrollY) current = id;
+        });
+        anchLinks.forEach(function(lnk) {
+          lnk.classList.toggle('active', lnk.getAttribute('href') === '#' + current);
+        });
+      }
+      window.addEventListener('scroll', setActive, { passive: true });
+      setActive();
+    })();
+  </script>
+  <script src="js/notes-widget.js"></script>
+</body>
+</html>

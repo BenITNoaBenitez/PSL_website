@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="Image/favicon.ico">
+  <title>Services Sécurité Incendie | Plans sur mesure, Installation, Maintenance, Formation — PSL Toulouse (31)</title>
+  <meta name="description" content="PSL assure 4 prestations clés en sécurité incendie : fabrication de plans d'évacuation sur mesure, installation d'équipements, vérification annuelle réglementaire et formation incendie du personnel. La Salvetat St Gilles (31).">
+  <meta name="keywords" content="maintenance extincteurs Toulouse, vérification annuelle incendie, plans évacuation sur mesure, installation RIA BAES alarme, formation incendie personnel, bureau vérificateur incendie Haute-Garonne, PSL La Salvetat St Gilles">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Services Sécurité Incendie — PSL Toulouse (31)">
+  <meta property="og:description" content="Plans sur mesure, installation, vérification annuelle réglementaire et formation incendie. PSL, votre partenaire unique en sécurité incendie en Haute-Garonne.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-pages.css">
+
+  <style>
+    /* ─── Cards overview services ─── */
+    .services-ov-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      background: var(--gray-light);
+      margin-bottom: 64px;
+    }
+    .sov-card {
+      background: var(--white);
+      padding: 36px 28px;
+      text-decoration: none;
+      display: block;
+      transition: background .22s;
+      position: relative;
+      overflow: hidden;
+    }
+    .sov-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 0;
+      background: var(--red);
+      transition: height .3s ease;
+    }
+    .sov-card:hover { background: var(--gray-bg); }
+    .sov-card:hover::before { height: 100%; }
+    .sov-num {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: var(--red);
+      opacity: .1;
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+    .sov-icon { color: var(--red); margin-bottom: 14px; display: block; }
+    .sov-title { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+    .sov-desc { font-size: .82rem; color: var(--gray); margin: 0; line-height: 1.65; }
+
+    /* ─── Tag de service ─── */
+    .service-tag {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      font-size: .62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 4px 12px;
+      margin-bottom: 16px;
+    }
+
+    /* ─── Section de service ─── */
+    .service-section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--gray-light);
+      scroll-margin-top: 120px;
+    }
+    .service-section:last-child { border-bottom: none; }
+
+    /* ─── Image service ─── */
+    .service-img-wrap { position: relative; overflow: hidden; }
+    .service-img-wrap img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+      transition: transform .5s ease;
+    }
+    .service-img-wrap:hover img { transform: scale(1.04); }
+    .service-img-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(28,31,35,.78));
+      padding: 28px 16px 14px;
+    }
+    .service-img-overlay span {
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,.75);
+    }
+
+    /* ─── Liste bénéfices ─── */
+    .benefits-list { list-style: none; padding: 0; margin: 18px 0; }
+    .benefits-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--gray-light);
+      font-size: .9rem;
+      color: var(--dark-gray);
+      line-height: 1.6;
+    }
+    .benefits-list li:last-child { border-bottom: none; }
+    .benefit-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--red);
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+
+    /* ─── Tableau maintenance ─── */
+    .maint-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 22px 0;
+      font-size: .87rem;
+    }
+    .maint-table th {
+      background: var(--dark);
+      color: rgba(255,255,255,.75);
+      padding: 10px 14px;
+      text-align: left;
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      font-weight: 700;
+    }
+    .maint-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray-light); color: var(--dark-gray); }
+    .maint-table tr:nth-child(even) td { background: var(--gray-bg); }
+    .maint-table .freq-badge {
+      display: inline-block;
+      font-size: .66rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      padding: 2px 8px;
+      background: rgba(229,51,43,.08);
+      color: var(--red);
+      border: 1px solid rgba(229,51,43,.25);
+    }
+
+    /* ─── Callout ─── */
+    .callout {
+      background: rgba(229,51,43,.05);
+      border-left: 4px solid var(--red);
+      padding: 16px 20px;
+      margin: 22px 0;
+    }
+    .callout p { margin: 0; font-size: .87rem; line-height: 1.72; color: var(--dark-gray); }
+    .callout strong { color: var(--dark); }
+
+    /* ─── Callout sombre ─── */
+    .callout-dark {
+      background: var(--dark);
+      padding: 28px 32px;
+      margin: 28px 0;
+      position: relative;
+    }
+    .callout-dark::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background: var(--red);
+    }
+    .callout-dark h4 { color: var(--white); margin-bottom: 10px; font-size: 1.05rem; }
+    .callout-dark p { color: rgba(255,255,255,.6); font-size: .88rem; margin-bottom: 16px; line-height: 1.7; }
+
+    /* ─── Pourquoi PSL ─── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--gray-light);
+    }
+    .why-item {
+      background: var(--white);
+      padding: 34px 28px;
+      transition: background .2s;
+    }
+    .why-item:hover { background: var(--gray-bg); }
+    .why-icon-box {
+      width: 46px;
+      height: 46px;
+      background: var(--gray-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--red);
+      margin-bottom: 18px;
+      border-bottom: 2px solid var(--red);
+      flex-shrink: 0;
+    }
+    .why-item h4 { font-size: 1rem; margin-bottom: 10px; }
+    .why-item p { font-size: .87rem; color: var(--gray); margin: 0; line-height: 1.7; }
+
+    /* ─── FAQ ─── */
+    .faq-item {
+      border: 1px solid var(--gray-light);
+      margin-bottom: 6px;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .faq-item.open { border-color: var(--red); box-shadow: 0 0 0 1px rgba(229,51,43,.12); }
+    .faq-question {
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      gap: 16px;
+      user-select: none;
+    }
+    .faq-question-text { font-size: .93rem; font-weight: 600; color: var(--dark); }
+    .faq-toggle {
+      width: 30px;
+      height: 30px;
+      border: 1px solid var(--gray-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--gray);
+      transition: background .2s, color .2s, border-color .2s;
+    }
+    .faq-item.open .faq-toggle { background: var(--red); border-color: var(--red); color: #fff; }
+    .faq-answer {
+      display: none;
+      padding: 0 20px 20px;
+      font-size: .88rem;
+      line-height: 1.78;
+      color: var(--dark-gray);
+      border-top: 1px solid var(--gray-light);
+    }
+    .faq-item.open .faq-answer { display: block; }
+
+    /* ─── Stats services ─── */
+    .services-stats {
+      background: var(--dark);
+      border-top: 4px solid var(--red);
+      padding: 56px 0;
+    }
+    .services-stats-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,.05);
+    }
+    .sstat {
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .sstat-num {
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .sstat-num em { color: var(--red); font-style: normal; }
+    .sstat-label {
+      font-size: .72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gray-mid);
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 1024px) {
+      .services-ov-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .services-stats-inner { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .services-ov-grid { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .services-stats-inner { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .services-ov-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-left">
+          <div class="header-top-item"><span>Parc d'Activités de Taure — 31880 La Salvetat St Gilles</span></div>
+        </div>
+        <div class="header-top-right">
+          <a href="tel:0534257462" class="header-top-item" style="color:#fff;font-weight:700;"><span>05 34 25 74 62</span></a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-container">
+      <a href="index-new.html" class="logo"><img src="logopsl - original - transparent.jpg" alt="PSL Sécurité Incendie — La Salvetat St Gilles"></a>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="index-new.html" class="nav-link">Accueil</a></li>
+        <li class="nav-item"><a href="notre-activite.html" class="nav-link">Notre activité</a></li>
+        <li class="nav-item">
+          <a href="nos-produits.html" class="nav-link has-dropdown">Nos produits</a>
+          <div class="mega-menu">
+            <a href="nos-produits.html#plans" class="mega-menu-item"><div class="mega-menu-text"><h4>Plans de sécurité incendie</h4><p>Évacuation, intervention, chambre</p></div></a>
+            <a href="nos-produits.html#signaletique" class="mega-menu-item"><div class="mega-menu-text"><h4>Signalétique</h4><p>Consignes, pictos, panneaux</p></div></a>
+            <a href="nos-produits.html#extincteurs" class="mega-menu-item"><div class="mega-menu-text"><h4>Extincteurs</h4><p>Eau, poudre, CO2 — certifiés NF/CE</p></div></a>
+            <a href="nos-produits.html#ria" class="mega-menu-item"><div class="mega-menu-text"><h4>RIA</h4><p>Robinets d'Incendie Armés</p></div></a>
+            <a href="nos-produits.html#blocs" class="mega-menu-item"><div class="mega-menu-text"><h4>Blocs autonomes</h4><p>Standard, SATI, anti-panique</p></div></a>
+            <a href="nos-produits.html#alarmes" class="mega-menu-item"><div class="mega-menu-text"><h4>Alarmes incendie</h4><p>Type 4, déclencheurs, sirènes</p></div></a>
+            <a href="nos-produits.html#accessoires" class="mega-menu-item"><div class="mega-menu-text"><h4>Accessoires</h4><p>Colonnes sèches, registres, bacs</p></div></a>
+            <a href="nos-produits.html#securite-personnes" class="mega-menu-item"><div class="mega-menu-text"><h4>Sécurité des personnes</h4><p>EPI, trousses, défibrillateur</p></div></a>
+            <a href="nos-produits.html#protection-domestique" class="mega-menu-item"><div class="mega-menu-text"><h4>Protection domestique</h4><p>Détecteurs, extincteurs, couvertures</p></div></a>
+            <a href="extincteurs-sans-fluor.html" class="mega-menu-item"><div class="mega-menu-text"><h4>Transition PFAS</h4><p>Extincteurs sans fluor et conformité 2030</p></div></a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="nos-services.html" class="nav-link active">Nos services</a></li>
+        <li class="nav-item">
+          <a href="les-normes.html" class="nav-link has-dropdown">Les normes</a>
+          <div class="dropdown-menu">
+            <a href="les-normes.html#societe" class="dropdown-link">Une société</a>
+            <a href="les-normes.html#collectivite" class="dropdown-link">Une collectivité</a>
+            <a href="les-normes.html#syndic" class="dropdown-link">Un syndic</a>
+            <a href="les-normes.html#commercant" class="dropdown-link">Un commerçant</a>
+            <a href="les-normes.html#batiment" class="dropdown-link">Une entreprise du bâtiment</a>
+            <a href="les-normes.html#particulier" class="dropdown-link">Un particulier</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary btn-sm nav-cta">
+        Demande de devis
+        <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L11.23 6.29a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 11-1.04-1.08l3.158-2.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+      </a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+
+  <!-- ========== PAGE HERO ========== -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="container">
+      <nav class="page-breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index-new.html">Accueil</a>
+        <span>/</span>
+        <strong>Nos services</strong>
+      </nav>
+      <span class="page-hero-eyebrow">Accompagnement complet — 4 prestations</span>
+      <h1>Un seul interlocuteur<br>pour toute votre sécurité incendie.</h1>
+      <p>De la conception de vos plans d'évacuation à la formation de vos équipes, PSL assure l'intégralité de votre mise en conformité incendie. Pas de sous-traitance, pas de multiplication des intervenants : vous avez un contact unique, réactif, expert.</p>
+    </div>
+  </section>
+
+
+  <!-- ========== VUE D'ENSEMBLE 4 SERVICES ========== -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-header center reveal" style="max-width:600px;margin:0 auto 48px;">
+        <span class="section-label">Nos 4 prestations</span>
+        <h2 class="section-title">Ce que PSL fait concrètement pour vous</h2>
+        <p class="section-subtitle">Chaque prestation répond à une obligation réglementaire précise. PSL les assure toutes — avec la même rigueur, la même réactivité.</p>
+      </div>
+
+      <div class="services-ov-grid">
+        <a href="#plans-mesure" class="sov-card reveal stagger-1">
+          <div class="sov-num">01</div>
+          <svg class="sov-icon" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z"/></svg>
+          <div class="sov-title">Fabrication de plans sur mesure</div>
+          <p class="sov-desc">Plans d'évacuation, d'intervention et de chambre fabriqués à partir de vos plans de bâtiment. NF X 08-070.</p>
+        </a>
+        <a href="#installation" class="sov-card reveal stagger-2">
+          <div class="sov-num">02</div>
+          <svg class="sov-icon" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l5.654-4.654m5.886-2.714c-.17.468-.41.894-.793 1.21l-3.03 2.496m5.823-3.706A7.5 7.5 0 0 0 6.668 6.668c-1.29 1.29-2.093 2.997-2.273 4.8"/></svg>
+          <div class="sov-title">Installation &amp; mise en service</div>
+          <p class="sov-desc">Pose et mise en service de vos extincteurs, RIA, BAES, alarmes et signalétique par nos techniciens qualifiés.</p>
+        </a>
+        <a href="#maintenance" class="sov-card reveal stagger-3">
+          <div class="sov-num">03</div>
+          <svg class="sov-icon" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"/></svg>
+          <div class="sov-title">Vérification &amp; maintenance réglementaire</div>
+          <p class="sov-desc">Contrôles annuels obligatoires de tous vos équipements. Rapport de vérification et mise à jour du registre de sécurité.</p>
+        </a>
+        <a href="#formation" class="sov-card reveal stagger-4">
+          <div class="sov-num">04</div>
+          <svg class="sov-icon" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/></svg>
+          <div class="sov-title">Formation incendie du personnel</div>
+          <p class="sov-desc">Manipulation d'extincteurs sur feux réels, guide-serre-file, exercices d'évacuation. Attestation remise à chaque participant.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== DÉTAILS SERVICES ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="page-layout">
+
+        <!-- ─── CONTENU ─── -->
+        <div>
+
+          <div class="intro-box reveal">
+            <p>Un seul interlocuteur pour tous vos besoins en sécurité incendie, c'est l'engagement de PSL depuis plus de 20 ans. Vous n'avez pas à coordonner un fabricant de plans, un installateur d'extincteurs et un formateur différents : <strong>PSL prend en charge l'ensemble du cycle de vie de votre installation incendie</strong>, de l'audit initial jusqu'au suivi annuel réglementaire.</p>
+          </div>
+
+
+          <!-- ══════════════════════════════
+               01 — FABRICATION PLANS MESURE
+               ══════════════════════════════ -->
+          <div id="plans-mesure" class="service-section reveal">
+            <span class="service-tag">01 — Conception</span>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;" class="srv-grid-2col">
+              <div>
+                <h2 style="font-size:1.5rem;margin-bottom:16px;">Fabrication de plans<br>de sécurité incendie sur mesure</h2>
+                <p>Chaque bâtiment est unique. C'est pourquoi PSL ne vend pas de plans "type" : nous <strong>concevons chaque plan à partir de vos plans de bâtiment</strong> (PDF, DWG, format papier ou relevé terrain), en intégrant précisément l'emplacement de chaque équipement, chaque sortie de secours, chaque voie d'évacuation.</p>
+                <p>Le résultat : un plan conforme à la norme NF X 08-070 (ancienne NF S 60-303), validé par votre soin sur bon de correction avant impression, livré prêt à l'affichage dans le support de votre choix.</p>
+
+                <h4 style="margin:24px 0 12px;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;color:var(--gray-mid);">Notre processus en 5 étapes</h4>
+                <div class="process-list">
+                  <div class="process-item">
+                    <div class="process-num"></div>
+                    <div class="process-content">
+                      <h4>Réception de vos plans</h4>
+                      <p>Transmettez-nous vos plans de bâtiment par email (PDF, DWG, image) ou par courrier. En l'absence de plans, nous organisons un relevé terrain sur site.</p>
+                    </div>
+                  </div>
+                  <div class="process-item">
+                    <div class="process-num"></div>
+                    <div class="process-content">
+                      <h4>Intégration réglementaire</h4>
+                      <p>Nos techniciens positionnent sur le plan : sorties de secours, extincteurs, RIA, blocs autonomes, déclencheurs manuels, colonnes sèches, coupes des fluides et toutes les informations requises par la norme NF X 08-070.</p>
+                    </div>
+                  </div>
+                  <div class="process-item">
+                    <div class="process-num"></div>
+                    <div class="process-content">
+                      <h4>Validation sur bon de correction</h4>
+                      <p>Vous recevez un aperçu numérique pour validation. Corrections illimitées jusqu'à votre satisfaction complète.</p>
+                    </div>
+                  </div>
+                  <div class="process-item">
+                    <div class="process-num"></div>
+                    <div class="process-content">
+                      <h4>Impression et finition</h4>
+                      <p>Impression haute résolution en atelier à La Salvetat St Gilles. Formats A4 à A0. Supports : plastifié, encadré PVC, plexi, aluminium, adhésif vinyle.</p>
+                    </div>
+                  </div>
+                  <div class="process-item">
+                    <div class="process-num"></div>
+                    <div class="process-content">
+                      <h4>Livraison et pose (option)</h4>
+                      <p>Livraison chez vous sous 5 à 7 jours ouvrés. Nous proposons également la pose des plans avec fixation murale aux emplacements réglementaires — à chaque niveau, à proximité des escaliers et des accès.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="callout">
+                  <p><strong>Mise à jour gratuite :</strong> si vos locaux sont modifiés (cloisons, extensions, déplacement d'équipements), PSL met à jour vos plans. Cette prestation est incluse dans notre contrat de maintenance annuelle.</p>
+                </div>
+              </div>
+
+              <div>
+                <div class="service-img-wrap" style="margin-bottom:2px;">
+                  <img src="Image/PEVAC.png" alt="Fabrication plans d'évacuation incendie sur mesure — PSL">
+                  <div class="service-img-overlay"><span>Plans sur mesure — PSL</span></div>
+                </div>
+                <div style="background:var(--gray-bg);padding:20px;">
+                  <p style="font-size:.82rem;margin:0;line-height:1.7;color:var(--gray);">
+                    <strong style="color:var(--dark);display:block;margin-bottom:8px;">Types de plans fabriqués :</strong>
+                  </p>
+                  <ul class="product-sub-list" style="margin-top:0;">
+                    <li>Plan d'évacuation (par niveau)</li>
+                    <li>Plan d'intervention pompiers</li>
+                    <li>Plan de chambre (hôtels, EHPAD)</li>
+                    <li>Consignes générales &amp; personnalisées</li>
+                    <li>Plans de sous-sol et parkings</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ══════════════════════════════
+               02 — INSTALLATION
+               ══════════════════════════════ -->
+          <div id="installation" class="service-section reveal">
+            <span class="service-tag">02 — Installation</span>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;" class="srv-grid-2col">
+              <div>
+                <div class="service-img-wrap" style="margin-bottom:2px;">
+                  <img src="Image/PHOTOSTFOYCAMION.png" alt="Installation équipements sécurité incendie PSL Toulouse Haute-Garonne">
+                  <div class="service-img-overlay"><span>Installation — PSL</span></div>
+                </div>
+                <div class="callout" style="margin-top:2px;">
+                  <p><strong>Zone d'intervention :</strong> PSL intervient sur toute la Haute-Garonne (31) et les départements limitrophes — Gers (32), Ariège (09), Hérault (34), Lot-et-Garonne (47), Tarn (81). Délai d'intervention : 24 à 72 heures pour les urgences.</p>
+                </div>
+              </div>
+
+              <div>
+                <h2 style="font-size:1.5rem;margin-bottom:16px;">Installation &amp; mise en service<br>de vos équipements incendie</h2>
+                <p>L'achat du bon équipement ne suffit pas : <strong>une installation non conforme peut rendre un extincteur inaccessible, un RIA sous-dimensionné ou un BAES mal positionné inefficace</strong>. PSL assure l'installation complète de vos équipements dans le respect des normes d'implantation et vous remet un dossier de conformité à l'issue de chaque chantier.</p>
+                <p>Nos techniciens réalisent au préalable un audit de vos locaux pour identifier précisément les besoins, les contraintes techniques et les obligations réglementaires liées à votre catégorie d'ERP ou à votre activité.</p>
+
+                <h4 style="margin:24px 0 12px;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;color:var(--gray-mid);">Équipements installés par PSL</h4>
+                <ul class="benefits-list">
+                  <li><div class="benefit-dot"></div><div><strong>Extincteurs portatifs et mobiles</strong> — choix de l'agent extincteur, implantation aux emplacements réglementaires, balisage et signalisation</div></li>
+                  <li><div class="benefit-dot"></div><div><strong>Robinets d'Incendie Armés (RIA)</strong> — raccordement hydraulique, dévidoir, mise en eau et test de débit</div></li>
+                  <li><div class="benefit-dot"></div><div><strong>Blocs autonomes d'éclairage (BAES)</strong> — câblage, pose aux emplacements réglementaires, test d'autonomie</div></li>
+                  <li><div class="benefit-dot"></div><div><strong>Alarmes incendie type 4</strong> — déclencheurs manuels, diffuseurs sonores, câblage et test de fonctionnement</div></li>
+                  <li><div class="benefit-dot"></div><div><strong>Signalétique complète</strong> — pose des panneaux, consignes, plans et pictogrammes aux emplacements conformes</div></li>
+                  <li><div class="benefit-dot"></div><div><strong>Défibrillateurs (DAE)</strong> — pose de l'armoire, balisage et enregistrement auprès des services d'urgence</div></li>
+                </ul>
+
+                <div class="callout-dark">
+                  <h4>Audit d'implantation gratuit</h4>
+                  <p>Avant tout devis, PSL effectue un audit de vos locaux sans frais. Nous identifions les équipements manquants, les non-conformités existantes et vous soumettons un plan d'équipement chiffré avec les priorités réglementaires.</p>
+                  <a href="contact.html" class="btn btn-primary btn-sm" style="display:inline-flex;">Demander un audit gratuit →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ══════════════════════════════
+               03 — MAINTENANCE
+               ══════════════════════════════ -->
+          <div id="maintenance" class="service-section reveal">
+            <span class="service-tag">03 — Maintenance</span>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;" class="srv-grid-2col">
+              <div>
+                <h2 style="font-size:1.5rem;margin-bottom:16px;">Vérification &amp; maintenance<br>réglementaire annuelle</h2>
+                <p>La réglementation française impose la <strong>vérification annuelle de l'ensemble des équipements de sécurité incendie</strong> par un organisme compétent. Ce n'est pas une option : en cas d'incendie avec des équipements non vérifiés, votre responsabilité civile et pénale est directement engagée — indépendamment de l'état réel de l'appareil.</p>
+                <p>PSL prend en charge l'intégralité de ce suivi annuel dans le cadre d'un <strong>contrat de maintenance</strong>. Une visite programmée, un rapport complet, une mise à jour du registre de sécurité, et un rappel automatique l'année suivante. Vous n'avez à vous occuper de rien.</p>
+
+                <h4 style="margin:24px 0 12px;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;color:var(--gray-mid);">Calendrier des vérifications réglementaires</h4>
+
+                <table class="maint-table">
+                  <thead>
+                    <tr>
+                      <th>Équipement</th>
+                      <th>Fréquence</th>
+                      <th>Base légale</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Extincteurs</td>
+                      <td><span class="freq-badge">Annuelle</span></td>
+                      <td>NF S 61-920 / Art. R4227-39</td>
+                    </tr>
+                    <tr>
+                      <td>RIA</td>
+                      <td><span class="freq-badge">Annuelle</span></td>
+                      <td>NF EN 671-3</td>
+                    </tr>
+                    <tr>
+                      <td>Épreuve tuyaux RIA</td>
+                      <td><span class="freq-badge">5 ans</span></td>
+                      <td>NF EN 671-3 § 7</td>
+                    </tr>
+                    <tr>
+                      <td>BAES — test batterie</td>
+                      <td><span class="freq-badge">Semestrielle</span></td>
+                      <td>Art. EL 18 — Arrêté 25/06/80</td>
+                    </tr>
+                    <tr>
+                      <td>BAES — vérification complète</td>
+                      <td><span class="freq-badge">Annuelle</span></td>
+                      <td>NF C 71-820</td>
+                    </tr>
+                    <tr>
+                      <td>Alarme incendie</td>
+                      <td><span class="freq-badge">Mensuelle + annuelle</span></td>
+                      <td>NF S 61-936</td>
+                    </tr>
+                    <tr>
+                      <td>Plans de sécurité</td>
+                      <td><span class="freq-badge">À chaque modification</span></td>
+                      <td>NF X 08-070</td>
+                    </tr>
+                    <tr>
+                      <td>Registre de sécurité</td>
+                      <td><span class="freq-badge">En continu</span></td>
+                      <td>Art. R4227-56 Code du Travail</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="callout">
+                  <p><strong>Révision quinquennale des extincteurs :</strong> en plus de la vérification annuelle, les extincteurs font l'objet d'une révision complète tous les 5 ou 10 ans (selon le constructeur) incluant le remplacement de l'agent extincteur, le rechargement et les tests de pression. PSL assure cette prestation en atelier.</p>
+                </div>
+              </div>
+
+              <div>
+                <div class="service-img-wrap">
+                  <img src="Image/MAINEXT.jpg" alt="Maintenance vérification annuelle extincteurs RIA BAES — PSL">
+                  <div class="service-img-overlay"><span>Maintenance réglementaire — PSL</span></div>
+                </div>
+
+                <div class="callout-dark" style="margin-top:2px;">
+                  <h4>Contrat d'entretien annuel PSL</h4>
+                  <p>Signez un contrat unique qui couvre l'ensemble de vos équipements incendie. Avantages : visite programmée à date fixe, rapport de vérification PDF, mise à jour du registre de sécurité, rappel automatique, tarif préférentiel sur les pièces et consommables.</p>
+                  <a href="contact.html" class="btn btn-primary btn-sm" style="display:inline-flex;">Demander un contrat de maintenance →</a>
+                </div>
+
+                <div style="background:var(--gray-bg);padding:20px;margin-top:2px;">
+                  <h4 style="font-size:.85rem;margin-bottom:12px;color:var(--dark);">Ce que comprend notre rapport de vérification :</h4>
+                  <ul class="checklist" style="margin:0;">
+                    <li><div class="checklist-check"></div>État général de chaque appareil (numéro de série, date de fabrication)</li>
+                    <li><div class="checklist-check"></div>Résultats des tests fonctionnels (pression, débit, autonomie)</li>
+                    <li><div class="checklist-check"></div>Liste des non-conformités détectées et plan d'action</li>
+                    <li><div class="checklist-check"></div>Visa technicien et date de prochaine vérification</li>
+                    <li><div class="checklist-check"></div>Mise à jour du registre de sécurité (page de vérification)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ══════════════════════════════
+               04 — FORMATION
+               ══════════════════════════════ -->
+          <div id="formation" class="service-section reveal" style="border-bottom:none;">
+            <span class="service-tag">04 — Formation</span>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;" class="srv-grid-2col">
+              <div>
+                <div class="service-img-wrap">
+                  <img src="Image/FORMA.jpg" alt="Formation incendie manipulation extincteurs guide serre-file — PSL">
+                  <div class="service-img-overlay"><span>Formation incendie — PSL</span></div>
+                </div>
+
+                <div style="background:var(--gray-bg);padding:20px;margin-top:2px;">
+                  <h4 style="font-size:.85rem;margin-bottom:12px;color:var(--dark);">Ce que vos collaborateurs savent faire après la formation :</h4>
+                  <ul class="checklist" style="margin:0;">
+                    <li><div class="checklist-check"></div>Choisir et utiliser le bon extincteur face à un départ de feu réel</li>
+                    <li><div class="checklist-check"></div>Déclencher l'alarme et alerter les secours rapidement</li>
+                    <li><div class="checklist-check"></div>Guider ou accompagner l'évacuation de leur zone</li>
+                    <li><div class="checklist-check"></div>Assister les personnes en situation de handicap lors d'une évacuation</li>
+                    <li><div class="checklist-check"></div>Accueillir et guider les sapeurs-pompiers à leur arrivée</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div>
+                <h2 style="font-size:1.5rem;margin-bottom:16px;">Formation incendie<br>du personnel</h2>
+                <p>Former votre personnel à la sécurité incendie n'est pas qu'une obligation légale (Article R4227-39 du Code du Travail) — c'est surtout ce qui fait la différence entre une évacuation réussie et un drame. Des collaborateurs formés réagissent vite, sans panique, et savent utiliser les équipements à disposition.</p>
+                <p>PSL assure des formations <strong>directement dans vos locaux</strong>, adaptées à votre configuration et à votre activité. Nos formateurs expérimentés réalisent les exercices pratiques sur feux réels avec les équipements de formation agréés — extincteurs à eau pulvérisée, bacs de feu contrôlés.</p>
+
+                <h4 style="margin:24px 0 12px;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;color:var(--gray-mid);">Nos formations disponibles</h4>
+                <ul class="benefits-list">
+                  <li><div class="benefit-dot"></div>
+                    <div>
+                      <strong>Manipulation d'extincteurs sur feux réels</strong><br>
+                      <span style="font-size:.82rem;color:var(--gray);">2 à 4 heures. Rappel théorique (classes de feu, choix de l'agent) + exercices pratiques en extérieur sur bacs de feu. Chaque participant manipule un extincteur.</span>
+                    </div>
+                  </li>
+                  <li><div class="benefit-dot"></div>
+                    <div>
+                      <strong>Guide et serre-file — évacuation</strong><br>
+                      <span style="font-size:.82rem;color:var(--gray);">2 à 3 heures. Rôle de chacun lors de l'alarme : déclenchement, balayage des zones, fermeture des portes coupe-feu, accompagnement au point de rassemblement.</span>
+                    </div>
+                  </li>
+                  <li><div class="benefit-dot"></div>
+                    <div>
+                      <strong>Exercice d'évacuation réglementaire</strong><br>
+                      <span style="font-size:.82rem;color:var(--gray);">Exercice complet chronométré, conformément à l'obligation de 2 exercices par an en ERP. Rapport d'exercice remis pour le registre de sécurité.</span>
+                    </div>
+                  </li>
+                  <li><div class="benefit-dot"></div>
+                    <div>
+                      <strong>Sensibilisation globale incendie</strong><br>
+                      <span style="font-size:.82rem;color:var(--gray);">1 à 2 heures. Causes d'incendie, réflexes de prévention, lecture du plan d'évacuation, rôle du registre de sécurité. Idéal pour les nouveaux arrivants.</span>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="spec-grid" style="margin-top:24px;">
+                  <div class="spec-item"><span class="spec-label">Format</span><span class="spec-value">Sur site, en vos locaux</span></div>
+                  <div class="spec-item"><span class="spec-label">Durée</span><span class="spec-value">2h à 1 journée</span></div>
+                  <div class="spec-item"><span class="spec-label">Effectif</span><span class="spec-value">5 à 30 personnes par session</span></div>
+                  <div class="spec-item"><span class="spec-label">Attestation</span><span class="spec-value">Remise à chaque participant</span></div>
+                </div>
+
+                <div class="callout">
+                  <p><strong>Obligation légale :</strong> l'Art. R4227-39 du Code du Travail impose à tout employeur de former son personnel à la sécurité incendie. En ERP, 2 exercices d'évacuation par an sont obligatoires. Ces formations doivent être tracées dans le registre de sécurité.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- fin contenu -->
+
+
+        <!-- ─── SIDEBAR ─── -->
+        <aside class="page-sidebar">
+          <div class="sidebar-widget">
+            <h4>Nos prestations</h4>
+            <ul class="sidebar-nav-list">
+              <li><a href="#plans-mesure">Plans sur mesure <span>→</span></a></li>
+              <li><a href="#installation">Installation &amp; mise en service <span>→</span></a></li>
+              <li><a href="#maintenance">Maintenance réglementaire <span>→</span></a></li>
+              <li><a href="#formation">Formation incendie <span>→</span></a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-cta">
+            <h4>Un projet, une question ?</h4>
+            <p>Nos techniciens répondent sous 24h. Audit initial sans engagement.</p>
+            <a href="contact.html">Nous contacter</a>
+          </div>
+
+          <div class="sidebar-widget" style="margin-top:16px;">
+            <h4>Documents utiles</h4>
+            <ul class="sidebar-nav-list">
+              <li><a href="les-normes.html">Obligations ERP <span>→</span></a></li>
+              <li><a href="les-normes.html#societe">Obligations entreprises <span>→</span></a></li>
+              <li><a href="les-normes.html#syndic">Obligations copropriété <span>→</span></a></li>
+              <li><a href="nos-produits.html">Voir nos produits <span>→</span></a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-widget" style="margin-top:16px;background:var(--dark);">
+            <h4 style="color:rgba(255,255,255,.5);border-bottom-color:rgba(255,255,255,.1);">Urgence incendie</h4>
+            <p style="font-size:.82rem;color:rgba(255,255,255,.45);margin-bottom:14px;line-height:1.7;">Extincteur hors service, alarme défaillante, vérification urgente après incident ? Appelez-nous.</p>
+            <a href="tel:0534257462" style="display:block;background:var(--red);color:#fff;text-align:center;padding:10px;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;">05 34 25 74 62</a>
+          </div>
+        </aside>
+
+      </div><!-- fin page-layout -->
+    </div>
+  </section>
+
+
+  <!-- ========== STATS PSL ========== -->
+  <div class="services-stats">
+    <div class="container">
+      <div class="services-stats-inner">
+        <div class="sstat reveal">
+          <div class="sstat-num">20<em>+</em></div>
+          <div class="sstat-label">Ans d'expérience</div>
+        </div>
+        <div class="sstat reveal stagger-2">
+          <div class="sstat-num">1</div>
+          <div class="sstat-label">Seul interlocuteur</div>
+        </div>
+        <div class="sstat reveal stagger-3">
+          <div class="sstat-num">4</div>
+          <div class="sstat-label">Prestations complémentaires</div>
+        </div>
+        <div class="sstat reveal stagger-4">
+          <div class="sstat-num">24<em>h</em></div>
+          <div class="sstat-label">Délai de réponse</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========== POURQUOI PSL ========== -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-header center reveal" style="max-width:580px;margin:0 auto 48px;">
+        <span class="section-label">Notre différence</span>
+        <h2 class="section-title">Pourquoi choisir PSL ?</h2>
+        <p class="section-subtitle">Au-delà du simple fournisseur, PSL est le partenaire technique de votre sécurité incendie — du premier audit jusqu'à la vérification annuelle.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-item reveal stagger-1">
+          <div class="why-icon-box">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg>
+          </div>
+          <h4>Un seul interlocuteur</h4>
+          <p>Votre technicien PSL connaît vos locaux, votre historique d'interventions et vos contraintes. Pas de coordination à gérer entre prestataires : une seule relation, un seul contrat, un seul numéro de téléphone.</p>
+        </div>
+        <div class="why-item reveal stagger-2">
+          <div class="why-icon-box">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+          </div>
+          <h4>Réactivité garantie</h4>
+          <p>Réponse sous 24h à toute demande de devis ou d'intervention. Pour les urgences (équipement hors service, contrôle préfectoral imminent), nous mobilisons une équipe dans les meilleurs délais.</p>
+        </div>
+        <div class="why-item reveal stagger-3">
+          <div class="why-icon-box">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+          </div>
+          <h4>Conformité assurée</h4>
+          <p>Chaque équipement livré ou installé par PSL est certifié et conforme aux normes en vigueur. Vous recevez un rapport de vérification qui vous protège en cas de contrôle administratif ou de sinistre.</p>
+        </div>
+        <div class="why-item reveal stagger-4">
+          <div class="why-icon-box">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z"/></svg>
+          </div>
+          <h4>Expertise terrain de 20 ans</h4>
+          <p>20 ans d'expérience sur le terrain en Haute-Garonne et dans toute la région toulousaine. Nos techniciens connaissent les spécificités des ERP locaux et les attentes des commissions de sécurité.</p>
+        </div>
+        <div class="why-item reveal stagger-5">
+          <div class="why-icon-box">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z"/></svg>
+          </div>
+          <h4>Tarifs transparents</h4>
+          <p>Devis gratuit, sans engagement, avec détail poste par poste. Pas de frais cachés. Contrats de maintenance à tarif annuel fixé dès la signature — sans surprise à la fin de l'exercice.</p>
+        </div>
+        <div class="why-item reveal stagger-6">
+          <div class="why-icon-box">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+          </div>
+          <h4>Ancrage local en Haute-Garonne</h4>
+          <p>Basés à La Salvetat St Gilles depuis notre création, nous intervenons rapidement sur Toulouse et toute la Haute-Garonne. Un prestataire local, c'est aussi un interlocuteur qui connaît votre environnement réglementaire régional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== FAQ ========== -->
+  <section class="section">
+    <div class="container" style="max-width:800px;">
+      <div class="section-header center reveal" style="margin-bottom:40px;">
+        <span class="section-label">Questions fréquentes</span>
+        <h2 class="section-title">Vos questions sur nos services</h2>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">Quelle est la différence entre une vérification et une maintenance ?</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>La <strong>vérification</strong> est un contrôle de conformité : le technicien s'assure que l'équipement est en état de fonctionner, que les plombs de sécurité sont intacts, que la pression est correcte et que l'appareil est bien implanté. Elle est obligatoire chaque année.</p>
+          <p>La <strong>maintenance</strong> comprend la vérification + les opérations correctives : remplacement d'un joint défectueux, recharge de l'agent extincteur, remplacement de la batterie d'un BAES, etc. PSL propose les deux dans le cadre d'un contrat annuel unique.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">Combien de temps faut-il pour fabriquer un plan d'évacuation ?</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Le délai standard de fabrication est de <strong>5 à 7 jours ouvrés</strong> à compter de la réception de vos plans de bâtiment et de la validation du bon de correction. Pour les commandes urgentes (contrôle préfectoral, visite de commission), nous pouvons traiter les demandes en 48 à 72 heures — contactez-nous directement par téléphone.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">La formation incendie est-elle obligatoire dans mon entreprise ?</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Oui. L'article <strong>R4227-39 du Code du Travail</strong> impose à tout employeur de mettre en place une formation pratique et appropriée en matière de sécurité incendie pour l'ensemble des travailleurs. Pour les ERP, l'arrêté du 25 juin 1980 impose en plus <strong>deux exercices d'évacuation par an</strong> dont au moins un doit avoir lieu dans les 6 premiers mois de l'année. Ces exercices doivent être consignés dans le registre de sécurité.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">PSL intervient-il en dehors de la Haute-Garonne ?</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>PSL est basé à La Salvetat St Gilles et intervient principalement sur la <strong>Haute-Garonne (31)</strong> et l'agglomération toulousaine. Nous intervenons également sur les départements limitrophes : Gers (32), Ariège (09), Tarn (81), Tarn-et-Garonne (82), Lot-et-Garonne (47) et Hérault (34). Pour tout projet hors de ces zones, contactez-nous pour évaluer la faisabilité.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">Que se passe-t-il si un équipement ne passe pas la vérification annuelle ?</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Notre technicien vous remet un rapport de non-conformité détaillant chaque anomalie constatée. En fonction de la gravité :</p>
+          <ul style="list-style:disc;padding-left:20px;margin-top:10px;font-size:.88rem;color:var(--dark-gray);">
+            <li style="margin-bottom:6px;">Si l'appareil peut être remis en état sur place (joint, plomb, manomètre), la réparation est effectuée immédiatement.</li>
+            <li style="margin-bottom:6px;">Si l'extincteur nécessite une révision complète (recharge, essai hydraulique), il est récupéré en atelier et remplacé provisoirement.</li>
+            <li>Si l'équipement est hors d'état de fonctionner, il est retiré et remplacé par un appareil neuf ou reconditionné.</li>
+          </ul>
+          <p style="margin-top:10px;">Dans tous les cas, vous recevez un rapport complet à verser dans votre registre de sécurité.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">Comment obtenir un devis pour un contrat de maintenance annuelle ?</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Contactez-nous par téléphone au <strong>05 34 25 74 62</strong> ou via le formulaire de contact. Nos techniciens organisent une visite de votre établissement (gratuite et sans engagement) pour faire l'inventaire de vos équipements existants et vous proposer un contrat adapté à vos besoins et à votre budget. Vous recevez le devis sous 24 à 48 heures après la visite.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========== CTA FINAL ========== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-content">
+          <span class="section-label">Passez à l'action</span>
+          <h2>Votre prochaine vérification réglementaire approche ?</h2>
+          <p>Ne laissez pas la date limite vous rattraper. PSL programme une visite à la date qui vous convient et prend en charge l'intégralité de votre dossier incendie. Devis gratuit, réponse sous 24h.</p>
+          <a href="contact.html" class="btn btn-primary btn-lg" style="margin-right:14px;">
+            Demander un devis gratuit
+            <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L11.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 11-1.04-1.08l3.158-2.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+          </a>
+          <div class="cta-phone">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6.75Z"/></svg>
+            05 34 25 74 62
+          </div>
+        </div>
+        <div class="cta-form">
+          <h3>Demande rapide de rendez-vous</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Nom / Société</label><input type="text" placeholder="Votre nom ou société"></div>
+            <div class="form-group"><label>Téléphone</label><input type="tel" placeholder="06 XX XX XX XX"></div>
+          </div>
+          <div class="form-group">
+            <label>Prestation souhaitée</label>
+            <select>
+              <option>Fabrication de plans sur mesure</option>
+              <option>Installation d'équipements</option>
+              <option>Maintenance / vérification annuelle</option>
+              <option>Formation incendie du personnel</option>
+              <option>Contrat d'entretien complet</option>
+              <option>Audit initial (état des lieux)</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Type d'établissement</label><input type="text" placeholder="Hôtel, bureau, entrepôt, école…"></div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;" onclick="window.location='contact.html'">Envoyer la demande →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="Image/LOGOTRANSPARENT.png" alt="PSL Sécurité Incendie"></div>
+          <p>Parc d'Activités de Taure<br>25 avenue Léonard de Vinci<br>31880 La Salvetat St Gilles</p>
+          <p style="margin-top:14px;"><strong style="color:var(--white);">Tél : 05 34 25 74 62</strong></p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#plans-mesure">Plans sur mesure</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#maintenance">Maintenance annuelle</a></li>
+            <li><a href="#formation">Formation incendie</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index-new.html">Accueil</a></li>
+            <li><a href="notre-activite.html">Notre activité</a></li>
+            <li><a href="nos-produits.html">Nos produits</a></li>
+            <li><a href="les-normes.html">Les normes</a></li>
+            <li><a href="contact.html">Contact &amp; Devis</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Informations</h4>
+          <ul class="footer-links">
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Plan du site</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© PSL — Sécurité Incendie — Tous droits réservés</div>
+        <div class="footer-bottom-links"><a href="#">Mentions légales</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // ─── FAQ accordion ───
+    function toggleFaq(el) {
+      var item = el.parentElement;
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(i) { i.classList.remove('open'); });
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // ─── srv-grid-2col responsive ───
+    (function() {
+      function adjustGrid() {
+        var grids = document.querySelectorAll('.srv-grid-2col');
+        grids.forEach(function(g) {
+          if (window.innerWidth < 900) {
+            g.style.gridTemplateColumns = '1fr';
+          } else {
+            g.style.gridTemplateColumns = '1fr 1fr';
+          }
+        });
+      }
+      adjustGrid();
+      window.addEventListener('resize', adjustGrid);
+    })();
+  </script>
+  <script src="js/notes-widget.js"></script>
+</body>
+</html>

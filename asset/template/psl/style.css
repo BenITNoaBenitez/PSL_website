@@ -1,0 +1,480 @@
+@charset "utf-8";
+
+/* --------------- */
+/* --- DEFAULT --- */
+/* --------------- */
+
+html, address,
+blockquote,
+body, dd, div,
+dl, dt, fieldset, form,
+frame, frameset,
+h1, h2, h3, h4,
+h5, h6, noframes,
+ol, p, ul, center,
+dir, hr, menu, pre   { display: block }
+/*li            { display: list-item }*/
+head            { display: none }
+table           { display: table }
+tr              { display: table-row }
+thead           { display: table-header-group }
+tbody           { display: table-row-group }
+tfoot           { display: table-footer-group }
+col             { display: table-column }
+colgroup        { display: table-column-group }
+td, th          { display: table-cell }
+caption         { display: table-caption }
+th              { font-weight: bolder; text-align: center }
+caption         { text-align: center }
+body            { margin: 8px }
+h1              { font-size: 2em; margin: .67em 0 }
+h2              { font-size: 1.5em; margin: .75em 0 }
+h3              { font-size: 1.17em; margin: .83em 0 }
+h4, p,
+blockquote, ul,
+fieldset, form,
+ol, dl, dir,
+menu            { margin: 1.12em 0 }
+h5              { font-size: .83em; margin: 1.5em 0 }
+h6              { font-size: .75em; margin: 1.67em 0 }
+h1, h2, h3, h4,
+h5, h6, b,
+strong          { font-weight: bolder }
+blockquote      { margin-left: 40px; margin-right: 40px }
+i, cite, em,
+var, address    { font-style: italic }
+pre, tt, code,
+kbd, samp       { font-family: monospace }
+pre             { white-space: pre }
+button, textarea,
+input, select   { display: inline-block }
+big             { font-size: 1.17em }
+small, sub, sup { font-size: .83em }
+sub             { vertical-align: sub }
+sup             { vertical-align: super }
+table           { border-spacing: 2px; }
+thead, tbody,
+tfoot           { vertical-align: middle }
+td, th          { vertical-align: inherit }
+s, strike, del  { text-decoration: line-through }
+hr              { border: 1px inset }
+ol, ul, dir,
+menu, dd        { margin-left: 40px }
+ol              { list-style-type: decimal }
+ol ul, ul ol,
+ul ul, ol ol    { margin-top: 0; margin-bottom: 0 }
+u, ins          { text-decoration: underline }
+br:before       { content: "\A" }
+:before, :after { white-space: pre-line }
+center          { text-align: center }
+:link, :visited { text-decoration: underline }
+:focus          { outline: thin dotted invert }
+
+/* Begin bidirectionality settings (do not change) */
+BDO[DIR="ltr"]  { direction: ltr; unicode-bidi: bidi-override }
+BDO[DIR="rtl"]  { direction: rtl; unicode-bidi: bidi-override }
+
+*[DIR="ltr"]    { direction: ltr; unicode-bidi: embed }
+*[DIR="rtl"]    { direction: rtl; unicode-bidi: embed }
+
+@media print{
+  h1            { page-break-before: always }
+  h1, h2, h3,
+  h4, h5, h6    { page-break-after: avoid }
+  ul, ol, dl    { page-break-before: avoid }
+}
+
+div.clear,
+span.clear
+{
+	clear: both;
+	line-height: 0;
+	font-size: 0;
+	height: 0;
+	display: block;
+	overflow: hidden;
+}
+
+/* ---------------------- */
+/* --- REMISES A ZERO --- */
+/* ---------------------- */
+
+body
+{
+	margin: 0;
+	padding: 0;
+}
+
+img
+{
+	border: 0;
+}
+
+/* ----------------------------------- */
+/* --- DEFAULT SUR TEXTES ET LiENS --- */
+/* ----------------------------------- */
+
+a:hover,
+a:active,
+a:focus
+{
+	text-decoration: none;
+}
+
+body, input, select, textarea, table
+{
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body, table
+{
+	color: #5f666b;
+}
+
+input, select, textarea
+{
+	color: #5f666b;
+}
+
+body, table
+{
+	line-height: 1.5em;
+}
+
+a
+{
+	color: #5E6376;
+	font-size: 1em;
+}
+
+table td
+{
+	vertical-align: top;
+}
+
+h2
+{
+	font-size: 2em;
+}
+
+h3
+{
+	font-size: 1.5em;
+}
+
+h4
+{
+	font-size: 1.3em;
+}
+
+/* -------------------------- */
+/* --- STYLES POUR iMAGES --- */
+/* -------------------------- */
+
+img.marge1,
+img.marge1bordure1
+{
+	margin: 0px 20px 5px 0px;
+}
+
+img.marge2,
+img.marge2bordure1
+{
+	margin-left: 20px;
+	margin-bottom: 5px;
+}
+
+img.bordure1,
+img.marge1bordure1,
+img.marge2bordure1
+{
+	padding: 7px;
+}
+
+img.bordure1
+{
+	border-top: 1px solid #fafafa;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #f0f0f0;
+}
+
+img.marge1bordure1
+{
+	border-top: 1px solid #fafafa;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #f0f0f0;
+}
+
+img.marge2bordure1
+{
+	border-top: 1px solid #fafafa;
+	border-right: 1px solid #f0f0f0;
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+}
+
+img.marge1,
+img.marge1bordure1,
+img.marge2,
+img.marge2bordure1,
+img.bordure1
+{
+	display: block;
+	background: #fff;
+}
+
+/* ------------------------- */
+/* --- STYLES POUR iSENS --- */
+/* ------------------------- */
+
+ul
+{
+	padding: 0;
+}
+
+ul.liste-puce
+{
+	margin-left: 0;
+	list-style: none;
+}
+
+ul.liste-puce li
+{
+	background: url(http://psl.fr/img/arrow-grey.gif) no-repeat 0 7px;
+	padding: 0 0 0 15px;
+}
+
+ul.liste-puce-2
+{
+	margin-left: 0;
+	list-style: none;
+}
+
+ul.liste-puce-2 li
+{
+	background: url(http://psl.fr/img/list-arrow-red.png) no-repeat 0 7px;
+	padding: 0 0 0 15px;
+}
+
+ul.liste-cadre
+{
+	list-style: none;
+	background: url(http://psl.fr/img/bg-w-30.png) repeat 0 0;
+	padding: 2ex;
+	border: 1px solid #ddd;
+	outline: 1px solid #fff!important;
+	margin: 1em 1px;
+	zoom: 1;
+}
+
+ul.liste-cadre li
+{
+	background: url(http://psl.fr/img/arrow-grey.gif) no-repeat 0 7px;
+	padding: 0 0 0 15px;
+}
+
+ul.devis
+{
+	list-style: square;
+}
+
+ul.devis li
+{
+	margin-bottom: 1px;
+}
+
+div.twolife a,
+a.bloc-orange,
+a.bloc-vert
+{
+	background-image: url(img/buttons-bg.gif);
+	background-repeat: no-repeat;
+	max-width: 492px;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	height: 26px;
+	font-family: din-condensed-medium, Arial, Helvetica, sans-serif;
+	font-size: 1.4em;
+	padding: 5px 10px 0 10px;
+}
+
+div.twolife a,
+a.bloc-orange
+{
+	background-position: right 0;
+}
+
+a.bloc-vert
+{
+	background-position: right -31px;
+}
+
+h2.titre-accueil
+{
+	font-size: 1.3em;
+	font-weight: normal;
+}
+
+h2.titre-accueil-vous-etes
+{
+	font-size: 1.8em;
+	font-weight: normal;
+	font-family: din-medium, Arial, Helvetica, sans-serif;
+	color: #e5332b;
+}
+
+h2.titre-accueil-focus
+{
+	font-size: 1.8em;
+	font-weight: normal;
+	font-family: din-medium, Arial, Helvetica, sans-serif;
+	color: #474e53;
+}
+
+h3.titre-paragraphe
+{
+	font-size: 1.4em;
+	font-weight: normal;
+	font-family: din-medium, Arial, Helvetica, sans-serif;
+	color: #E5332B;
+	border-bottom: 1px dotted #E5332B;
+	padding-bottom: .3em;
+	margin-top: 2em;
+}
+
+h4.titre-paragraphe
+{
+	font-size: 1.3em;
+	font-weight: normal;
+	font-family: din-medium, Arial, Helvetica, sans-serif;
+	color: #E5332B;
+	margin: .5em 0;
+}
+
+h3.titre-paragraphe a
+{
+	color: #E5332B;
+	text-decoration: none;
+}
+
+h3.titre-paragraphe a:hover
+{
+	color: #5F666B;
+}
+
+div.box
+{
+	background: url(http://psl.fr/img/bg-w-60.png) repeat 0 0;
+	padding: 2ex;
+	border: 1px solid #fff;
+	outline: 1px solid #eee!important;
+	margin: 1em 1px;
+}
+
+div.box h3.titre-paragraphe
+{
+	margin-top: 0;
+}
+
+span.couleur-01
+{
+	color: #FCC300;
+}
+
+span.couleur-02
+{
+	color: #E5332B;
+}
+
+span.couleur-01-large
+{
+	color: #FCC300;
+	font-size: 1.1em;
+}
+
+span.couleur-01-large a
+{
+	color: #FCC300;
+}
+
+span.couleur-02-large
+{
+	color: #E5332B;
+	font-size: 1.1em;
+}
+
+span.couleur-02-large a
+{
+	color: #E5332B;
+}
+
+a.couleur-01
+{
+	color: #FCC300;
+}
+
+a.couleur-02
+{
+	color: #E5332B;
+}
+
+table.tableau-normes
+{
+	border-collapse: collapse;
+	font-size: .85em;
+	margin: 1em 0;
+	width: 100%;
+}
+
+table.tableau-normes th
+{
+	background: url(http://psl.fr/img/bg-w-80.png) repeat 0 0;
+	text-align: left;
+	padding: 10px;
+	white-space: nowrap;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	color: #E5332B;
+}
+
+table.tableau-normes td
+{
+	background: url(http://psl.fr/img/bg-w-60.png) repeat 0 0;
+	padding: 10px;
+	border-bottom: 2px solid #ddd;
+}
+
+table.tableau-normes td *:first-child
+{
+	margin-top: 0;
+}
+
+table.tableau-01
+{
+	border-collapse: collapse;
+	font-size: .85em;
+	margin: 1em 0;
+	width: 100%;
+}
+
+table.tableau-01 th
+{
+	background: url(http://psl.fr/img/bg-w-80.png) repeat 0 0;
+	text-align: left;
+	padding: 10px;
+	white-space: nowrap;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	color: #E5332B;
+}
+
+table.tableau-01 td
+{
+	background: url(http://psl.fr/img/bg-w-60.png) repeat 0 0;
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+}

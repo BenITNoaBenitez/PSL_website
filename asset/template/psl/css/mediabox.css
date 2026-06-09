@@ -1,0 +1,406 @@
+/* ::::::::::::::::::::: */
+/* ::::: media box ::::: */
+/* ::::::::::::::::::::: */
+
+.common div.mb-global
+{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	/*background: url(http://psl.fr/../img/mediabox-assets/overlay.gif) repeat 0 0;*/
+}
+
+.common div.mb-overlay
+{
+	position: fixed;
+	background: #000;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	z-index: 2;
+}
+
+.common div.mb-capsule
+{
+	z-index: 3;
+	position: fixed;
+	padding: 25px;
+	background: #fff url(http://psl.fr/../img/mediabox-assets/ajax-loader-w.gif) no-repeat center center;
+	
+	/*
+	-moz-box-shadow: 0 0 25px 0 rgba(0,0,0,0.5);
+	-webkit-box-shadow: rgba(0,0,0,0.5) 0 0 25px;
+	-webkit-box-shadow: 0 0 25px 0 rgba(0,0,0,0.5);
+	*/
+	
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	
+	overflow: hidden;
+}
+
+.common div.mb-capsule.draggable
+{
+	cursor: move;
+}
+
+.common div.mb-capsule.resizable div.mb-hdl.resize
+{
+	display: block;
+}
+
+.common div.mb-container
+{
+	background-color: #fff;
+	overflow: auto;
+	position: relative;
+	height: 100%;
+}
+
+.common div.mb-layer
+{
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: url(http://psl.fr/../img/mediabox-assets/pixelt.gif) repeat 0 0;
+}
+
+.common div.mb-layer.visible
+{
+	display: block;
+}
+
+.common div.image img
+{
+	position: absolute;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.common div.mb-bars
+{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 3;
+}
+
+.common div.mb-desc-bar img
+{
+	display: none;
+}
+
+.common div.mb-context-bar,
+.common div.mb-desc-bar,
+.common div.mb-thumb-bar
+{
+	position: relative;
+	text-align: center;
+	color: #fff;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.common div.mb-progress-bar
+{
+	height: 2px;
+	position: relative;
+	background: #444;
+	border-top: 1px solid #444;
+}
+
+.common div.mb-progress-bar div.mercury
+{
+	height: 3px;
+	border-top: 2px solid #0CF;
+	border-bottm: 2px solid #0CF;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #09F;
+}
+
+.common div.mb-context-bar
+{
+	border-top: 1px solid #444;
+	background: #333;
+	height: 50px;
+}
+
+.common div.mb-desc-bar
+{
+	border-top: 1px solid #333;
+	background: #222;
+	font-size: 1.2em;
+	line-height: 1.7em;
+	text-shadow: 0 0 5px #000;
+}
+
+.common div.mb-thumb-bar
+{
+	left: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.common div.mb-thumb-bar ul
+{
+	margin: 0 0 2px;
+	padding: 0;
+	list-style: none;
+	float: left;
+}
+
+.common div.mb-thumb-bar ul li
+{
+	float: left;
+	background: #333;
+	color: #fff;
+	margin-right: 2px;
+	height: 50px;
+	width: 100px;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	border: 5px solid #333;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.common div.mb-thumb-bar ul li.image,
+.common div.mb-thumb-bar ul li.youtube
+{
+	background-position: center center;
+}
+
+.common div.mb-thumb-bar ul li.pdf span,
+.common div.mb-thumb-bar ul li.page span,
+.common div.mb-thumb-bar ul li.audio span,
+.common div.mb-thumb-bar ul li.video span,
+.common div.mb-thumb-bar ul li.swf span
+{
+	display: block;
+	font-size: .8em;
+	line-height: 1.1em;
+	padding-left: 45px;
+	text-align: left;
+}
+
+.common div.mb-thumb-bar ul li.youtube span
+{
+	background: url(http://psl.fr/../img/mediabox-assets/ico-youtube.png) no-repeat center bottom;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	display: block;
+}
+
+.common div.mb-thumb-bar ul li.pdf		{ background-image: url(../img/mediabox-assets/ico-pdf.png); }
+.common div.mb-thumb-bar ul li.page		{ background-image: url(../img/mediabox-assets/ico-page.png); }
+.common div.mb-thumb-bar ul li.audio	{ background-image: url(../img/mediabox-assets/ico-audio.png); }
+.common div.mb-thumb-bar ul li.video	{ background-image: url(../img/mediabox-assets/ico-video.png); }
+.common div.mb-thumb-bar ul li.swf		{ background-image: url(../img/mediabox-assets/ico-swf.png); }
+
+.common div.mb-thumb-bar ul li.selected,
+.common div.mb-thumb-bar ul li:hover
+{
+	border-color: #e2001a;
+}
+
+.common div.mb-thumb-bar ul li.selected
+{
+	cursor: default;
+}
+
+.common div.mb-thumb-bar ul li img
+{
+	display: block;
+	width: 100%;
+}
+
+.common div.mb-btn
+{
+	cursor: pointer;
+}
+
+.common div.mb-btn:hover
+{
+	text-decoration: underline;
+}
+
+.common div.mb-btn.play,
+.common div.mb-btn.previous,
+.common div.mb-btn.next
+{
+	position: absolute;
+	height: 0;
+	left: 50%;
+	top: 50%;
+	overflow: hidden;
+	margin-top: -20px;
+	padding-top: 40px;
+}
+
+.common div.mb-btn.play
+{
+	background: url(http://psl.fr/../img/mediabox-assets/play.png) no-repeat 0 0;
+	width: 40px;
+	margin-left: -20px;
+}
+
+.common div.mb-btn.play.running
+{
+	background-image: url(../img/mediabox-assets/pause.png);
+}
+
+.common div.mb-btn.play:active
+{
+	margin-top: -19px;
+}
+
+.common div.mb-btn.previous
+{
+	background: url(http://psl.fr/../img/mediabox-assets/previous.png) no-repeat 0 0;
+	width: 44px;
+	margin-left: -59px;
+}
+
+.common div.mb-btn.previous:active
+{
+	margin-left: -60px;
+}
+
+.common div.mb-btn.next
+{
+	background: url(http://psl.fr/../img/mediabox-assets/next.png) no-repeat 0 0;
+	width: 44px;
+	margin-left: 15px;
+}
+
+.common div.mb-btn.next:active
+{
+	margin-left: 16px;
+}
+
+.common div.mb-btn.first,
+.common div.mb-btn.last
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 0;
+	overflow: hidden;
+	padding-top: 10px;
+	margin-top: -5px;
+	width: 6px;
+}
+
+.common div.mb-btn.first
+{
+	background: url(http://psl.fr/../img/mediabox-assets/first.png) no-repeat 0 0;
+	margin-left: -71px;
+}
+
+.common div.mb-btn.first:active
+{
+	margin-left: -72px;
+}
+
+.common div.mb-btn.last
+{
+	background: url(http://psl.fr/../img/mediabox-assets/last.png) no-repeat 0 0;
+	margin-left: 65px;
+}
+
+.common div.mb-btn.last:active
+{
+	margin-left: 66px;
+}
+
+.common div.mb-btn.maximize
+{
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	background: url(http://psl.fr/../img/mediabox-assets/fullscreen.png) no-repeat 0 0;
+	margin-top: -17px;
+	height: 0;
+	width: 40px;
+	padding-top: 34px;
+	overflow: hidden;
+	display: none;
+}
+
+.common div.mb-btn.close
+{
+	position: absolute;
+	right: 6px;
+	top: 6px;
+	background: url(http://psl.fr/../img/mediabox-assets/close.png) no-repeat 0 0;
+	width: 16px;
+	height: 0;
+	padding-top: 16px;
+	overflow: hidden;
+}
+
+.common div.mb-hdl.resize
+{
+	display: none;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	cursor: nw-resize;
+	height: 0;
+	width: 0;
+	background: #ccc;
+	overflow: hidden;
+	border-left: 15px solid #fff;
+	border-right: 15px solid #323232;
+	border-top: 15px solid #fff;
+	border-bottom: 0;
+}
+
+.common div.mb-container p.alert
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: #e2001a;
+}
+
+.common div.mb-container p.alert a
+{
+	color: #e2001a;
+}
+
+.common div.mb-container div.scrollable
+{
+	padding-right: 20px;
+}
+
+.common div.mb-global .hide
+{
+	display: none;
+}
+
+.common div.mb-global div.pdfembed
+{
+	height: 100%;
+	width: 100%;
+}
+
+.common div.mb-global object
+{
+	margin: 0;
+}

@@ -1,0 +1,424 @@
+@charset "utf-8";
+
+/* :::::::::::::::::: */
+/* ::::: search ::::: */
+/* :::::::::::::::::: */
+
+.common p.result-excerpt
+{
+	font-style: italic;
+}
+
+.common p.result-path
+{
+	font-size: .85em!important;
+}
+
+.common p.result-path a
+{
+	padding: 0 5px;
+	color: #E5332B;
+	text-decoration: none;
+}
+
+.common p.result-path a:hover
+{
+	text-decoration: underline;
+}
+
+.common p.result-path a:first-child
+{
+	padding-left: 0;
+}
+
+.common p.result-path strong
+{
+	padding: 0 5px;
+	color: #E5332B;
+}
+
+/* ::::::::::::::: */
+/* ::::: map ::::: */
+/* ::::::::::::::: */
+
+.common div.site-map ul
+{
+	margin-left: 0;
+	list-style: none;
+}
+
+.common div.site-map ul li
+{
+	background: url(http://psl.fr/../img/bg-w-60.png) repeat 0 0;
+	padding: 2ex;
+	border: 1px solid #fff;
+	outline: 1px solid #eee!important;
+	margin: 1em 1px;
+}
+
+.common div.site-map ul li a
+{
+	font-family: din-medium, Arial, Helvetica, sans-serif;
+	color: #E5332B;
+	text-decoration: none;
+	font-size: 1.4em;
+	display: block;
+}
+
+.common div.site-map ul li a:hover
+{
+	color: #5F666B;
+}
+
+.common div.site-map ul ul
+{
+	margin: 1em 0 1em 20px;
+}
+
+.common div.site-map ul ul li
+{
+	background: none;
+	padding: 0;
+	border: none;
+	outline: none!important;
+	margin: 0;
+}
+
+.common div.site-map ul ul li a
+{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #5F666B;
+	font-size: 1em;
+	background: url(http://psl.fr/../img/arrow-grey.gif) no-repeat 0 center;
+	padding-left: 10px;
+}
+
+.common div.site-map ul ul li a:hover
+{
+	color: #E5332B;
+}
+
+.common div.site-map ul ul ul
+{
+	display: none;
+}
+
+/* ::::::::::::::::::::::::: */
+/* ::::: demande devis ::::: */
+/* ::::::::::::::::::::::::: */
+
+.common form.demande-devis table
+{
+	width: 100%;
+	border-collapse: collapse;
+	border: 0;
+}
+
+.common form.demande-devis table td
+{
+	padding: 5px 10px;
+	width: 50%;
+}
+
+.common form.demande-devis h3.titre-paragraphe
+{
+	margin-bottom: 0;
+}
+
+.common form.demande-devis tr:first-child h3.titre-paragraphe
+{
+	margin-top: 0;
+}
+
+.common form.demande-devis td > label
+{
+	font-weight: bold;
+	color: #E5332B;
+}
+
+.common form.demande-devis input,
+.common form.demande-devis textarea
+{
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.common form.demande-devis textarea[name=reference]
+{
+	font-size: .8em;
+	height: 200px;
+}
+
+.common form.demande-devis input[name=nom],
+.common form.demande-devis input[name=prenom],
+.common form.demande-devis input[name=adresse],
+.common form.demande-devis input[name=ville],
+.common form.demande-devis input[name=societe]
+{
+	text-transform: capitalize;
+}
+
+.common form.demande-devis input[type=radio]
+{
+	margin-left: 20px;
+	width: auto;
+}
+
+.common form.demande-devis .radio-group label
+{
+	font-size: .9em;
+}
+
+/*
+.common form.demande-devis label:first-child input[type=radio]
+{
+	margin-left: 0;
+}
+*/
+
+.common form.demande-devis input.large
+{
+	width: 100%;
+}
+
+.common button.submit
+{
+	background: url(http://psl.fr/../img/button-validate-2.png) no-repeat 0 0;
+	border: none;
+	cursor: pointer;
+	height: 21px;
+	text-align: left;
+	margin: 0;
+	padding: 0 0 0 27px;
+	text-indent: 0;
+	font-size: 1.2em;
+	font-weight: normal;
+	font-family: din-medium, Arial, Helvetica, sans-serif;
+	color: #E5332B;
+}
+
+.common select.marged
+{
+	margin-right: 15px;
+}
+
+.common form.demande-devis button.submit:hover
+{
+	color: #5F666B;
+	background-image: url(../img/button-validate-2-hover.png);
+}
+
+.common form.demande-devis div.prod-box
+{
+	padding: 10px;
+	border: 1px solid #ddd;
+	margin: 0;
+	background: #fff;
+	position: relative;
+	overflow: hidden;
+}
+
+.common form.demande-devis div.prod-box div.deletable
+{
+	background-color: #f5f5f5;
+	font-weight: bold;
+	font-size: .8em;
+	line-height: 1.3em;
+	display: block;
+	padding: 3px 5px 3px;
+	margin-bottom: 2px;
+	overflow: auto;
+}
+
+/*
+.common form.demande-devis div.prod-box div.deletable:hover
+{
+	background-color: #ddd;
+}
+*/
+
+.common form.demande-devis div.prod-box div.bloc-left
+{
+	float: left;
+	width: 461px;
+	padding-top: 2px;
+}
+
+.common form.demande-devis div.prod-box div.bloc-left a
+{
+	display: block;
+	text-decoration: none;
+}
+
+.common form.demande-devis div.prod-box div.bloc-left a:hover
+{
+	text-decoration: underline;
+}
+
+.common form.demande-devis div.prod-box div.bloc-right
+{
+	float: left;
+	width: 100px;
+	padding-right: 15px;
+	text-align: right;
+	font-style: italic;
+	color: #999;
+	position: relative;
+}
+
+.common form.demande-devis div.prod-box div.deletable span.del
+{
+	background: url(http://psl.fr/../img/bt-close.png) no-repeat center center;
+	overflow: hidden;
+	display: block;
+	width: 7px;
+	height: 0;
+	padding-top: 15px;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.common form.demande-devis div.prod-box div.deletable input
+{
+	width: 30px;
+	text-align: right;
+	font-size: .9em;
+}
+
+.common form.demande-devis div.products-list
+{
+	overflow: auto;
+	height: 200px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	margin: 0 0 0;
+	background: #fff;
+	position: relative;
+	display: none;
+}
+
+.common form.demande-devis small
+{
+	color: #888;
+	font-style: italic;
+	display: block;
+	margin-bottom: 1em;
+}
+
+.common form.demande-devis div.products-list ul
+{
+	margin: 0;
+}
+
+.common form.demande-devis div.products-list ul li
+{
+	float: none;
+	margin: 0;
+	background: none;
+}
+
+.common form.demande-devis div.products-list ul li span.label
+{
+	padding: 0;
+	background: none;
+	display: inline;
+}
+
+.common form.demande-devis div.products-list ul li a
+{
+	height: auto;
+	background: none!important;
+	padding: 0;
+	width: auto;
+	border-top: none;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.common form.demande-devis div.products-list ul ul
+{
+	margin: .2em 0 1em;
+}
+
+.common form.demande-devis div.products-list ul ul ul
+{
+	margin-left: 20px;
+}
+
+.common form.demande-devis div.products-list ul ul li
+{
+	position: relative;
+	line-height: 1em;
+	margin-bottom: 1px;
+}
+
+.common form.demande-devis div.products-list ul ul li.even a
+{
+	background-color: #f5f5f5!important;
+}
+
+.common form.demande-devis div.products-list ul ul li a
+{
+	font-weight: normal;
+	background-image: url(http://psl.fr/../img/arrow-grey.gif)!important;
+	background-repeat: no-repeat!important;
+	background-position: 10px center!important;
+	padding: 3px 30px 4px 20px;
+	font-size: .85em;
+}
+
+.common form.demande-devis div.products-list ul ul li a.category
+{
+	background: none!important;
+	font-weight: bold;
+}
+
+.common form.demande-devis div.products-list ul ul li.hide
+{
+	display: none;
+}
+
+.common form.demande-devis div.products-list ul ul li a.selected
+{
+	color: #5E6376;
+	background-color: #ddd!important;
+}
+
+.common form.demande-devis div.products-list ul ul li a.clone
+{
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: url(http://psl.fr/../img/external-n.png) no-repeat center center!important;
+	width: 20px;
+	overflow: hidden;
+	padding: 0;
+	text-indent: -10000px;
+}
+
+.common form.demande-devis div.products-list ul ul li a.clone:hover,
+.common form.demande-devis div.products-list ul ul li a.clone:active,
+.common form.demande-devis div.products-list ul ul li a.clone:focus
+{
+	background: url(http://psl.fr/../img/external.png) no-repeat center center!important;
+}
+
+.common form.demande-devis div.dump
+{
+	overflow: scroll;
+	position: relative;
+	width: 500px;
+	height: 100px;
+}
+
+p.mandatory
+{
+	color: #e2001a;
+	background: url(http://psl.fr/../img/bg-w-30.png) repeat 0 0;
+	padding: 10px;
+	border: 1px solid #fff;
+}

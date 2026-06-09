@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.adi-incendie.fr)",
+      "WebFetch(domain:www.eurofeu.fr)"
+    ]
+  }
+}
