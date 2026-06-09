@@ -41,7 +41,8 @@
     name: 'psl_notes_reviewer',
     draftPrefix: 'psl_notes_draft_'
   };
-  var getToken = function () { return localStorage.getItem(LS.token) || ''; };
+  // Jeton : priorité au localStorage, sinon jeton embarqué (window.NOTES_CONFIG.token)
+  var getToken = function () { return localStorage.getItem(LS.token) || (window.NOTES_CONFIG && window.NOTES_CONFIG.token) || ''; };
   var setToken = function (v) { localStorage.setItem(LS.token, v.trim()); };
   var getName = function () { return localStorage.getItem(LS.name) || ''; };
   var setName = function (v) { localStorage.setItem(LS.name, v.trim()); };
@@ -110,28 +111,30 @@
   }
 
   // ---------- Styles ----------
+  var BLUE = '#1666d6', BLUE2 = '#0f56b8';
   var css = '' +
-    '#psl-nw-btn{position:fixed;right:18px;bottom:18px;z-index:99998;background:#e2001a;color:#fff;border:none;border-radius:999px;padding:12px 18px;font:600 14px/1 Inter,system-ui,sans-serif;box-shadow:0 6px 20px rgba(0,0,0,.25);cursor:pointer;display:flex;align-items:center;gap:8px}' +
-    '#psl-nw-btn:hover{background:#c40016}' +
-    '#psl-nw-panel{position:fixed;right:18px;bottom:74px;z-index:99999;width:360px;max-width:calc(100vw - 36px);max-height:78vh;background:#fff;border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.3);display:none;flex-direction:column;overflow:hidden;font:14px/1.45 Inter,system-ui,sans-serif;color:#1a1a1a}' +
+    '#psl-nw-btn{position:fixed;left:18px;bottom:18px;z-index:99998;background:' + BLUE + ';color:#fff;border:none;border-radius:4px;width:66px;height:66px;font:700 12px/1.2 Arial,system-ui,sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.3);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}' +
+    '#psl-nw-btn:hover{background:' + BLUE2 + '}' +
+    '#psl-nw-btn .ico{font-size:22px}' +
+    '#psl-nw-panel{position:fixed;left:18px;bottom:92px;z-index:99999;width:440px;max-width:calc(100vw - 36px);max-height:85vh;background:#fff;border:2px solid ' + BLUE + ';border-radius:6px;box-shadow:0 14px 44px rgba(0,0,0,.35);display:none;flex-direction:column;overflow:hidden;font:14px/1.5 Arial,system-ui,sans-serif;color:#1a1a1a}' +
     '#psl-nw-panel.open{display:flex}' +
-    '.psl-nw-head{background:#1a1a1a;color:#fff;padding:12px 14px;display:flex;align-items:center;justify-content:space-between}' +
-    '.psl-nw-head b{font-size:14px}.psl-nw-head small{display:block;opacity:.7;font-weight:400;font-size:11px;margin-top:2px}' +
-    '.psl-nw-x{background:none;border:none;color:#fff;font-size:20px;cursor:pointer;line-height:1}' +
-    '.psl-nw-body{padding:12px 14px;overflow:auto}' +
-    '.psl-nw-body textarea{width:100%;box-sizing:border-box;min-height:84px;border:1px solid #d0d0d0;border-radius:8px;padding:9px;font:inherit;resize:vertical}' +
-    '.psl-nw-row{display:flex;gap:8px;margin-top:9px}' +
-    '.psl-nw-btn1{flex:1;background:#e2001a;color:#fff;border:none;border-radius:8px;padding:10px;font:600 14px Inter,sans-serif;cursor:pointer}' +
+    '.psl-nw-banner{background:#fff3cd;color:#7a5c00;font-size:11px;font-weight:700;letter-spacing:.3px;padding:6px 14px;border-bottom:1px solid #f0e0a0;text-align:center;text-transform:uppercase}' +
+    '.psl-nw-head{background:' + BLUE + ';color:#fff;padding:12px 14px;display:flex;align-items:center;justify-content:space-between}' +
+    '.psl-nw-head b{font-size:15px}.psl-nw-head small{display:block;opacity:.85;font-weight:400;font-size:12px;margin-top:2px}' +
+    '.psl-nw-x{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;line-height:1}' +
+    '.psl-nw-body{padding:14px 16px;overflow:auto}' +
+    '.psl-nw-body textarea{width:100%;box-sizing:border-box;min-height:120px;border:1px solid #c8c8c8;border-radius:6px;padding:10px;font:inherit;resize:vertical}' +
+    '.psl-nw-body input{width:100%;box-sizing:border-box;border:1px solid #c8c8c8;border-radius:6px;padding:10px;font:inherit;margin-top:4px}' +
+    '.psl-nw-body label{display:block;font-size:13px;color:#333;margin:10px 0 2px;font-weight:700}' +
+    '.psl-nw-row{display:flex;gap:8px;margin-top:12px}' +
+    '.psl-nw-btn1{flex:1;background:' + BLUE + ';color:#fff;border:none;border-radius:6px;padding:12px;font:700 14px Arial,sans-serif;cursor:pointer}' +
+    '.psl-nw-btn1:hover{background:' + BLUE2 + '}' +
     '.psl-nw-btn1:disabled{opacity:.5;cursor:default}' +
-    '.psl-nw-link{background:none;border:none;color:#666;font-size:12px;cursor:pointer;text-decoration:underline;padding:0}' +
-    '.psl-nw-msg{font-size:12px;margin-top:8px;min-height:16px}' +
+    '.psl-nw-link{background:none;border:none;color:' + BLUE + ';font-size:12px;cursor:pointer;text-decoration:underline;padding:0;margin-top:12px}' +
+    '.psl-nw-msg{font-size:13px;margin-top:10px;min-height:16px}' +
     '.psl-nw-msg.ok{color:#0a8a3a}.psl-nw-msg.err{color:#c40016}' +
-    '.psl-nw-set{border-top:1px solid #eee;margin-top:12px;padding-top:10px}' +
-    '.psl-nw-set label{display:block;font-size:12px;color:#444;margin:8px 0 3px}' +
-    '.psl-nw-set input{width:100%;box-sizing:border-box;border:1px solid #d0d0d0;border-radius:7px;padding:8px;font:inherit}' +
-    '.psl-nw-set .hint{font-size:11px;color:#888;margin-top:6px}' +
-    '.psl-nw-set a{color:#e2001a}' +
-    '.psl-nw-existing{margin-top:12px;border-top:1px solid #eee;padding-top:10px;font-size:12px;color:#555;white-space:pre-wrap;word-break:break-word;max-height:160px;overflow:auto;background:#fafafa;border-radius:8px;padding:9px}';
+    '.psl-nw-hint{font-size:12px;color:#777;margin-top:8px}' +
+    '.psl-nw-existing{margin-top:14px;border-top:1px solid #eee;padding-top:12px;font-size:12px;color:#555;white-space:pre-wrap;word-break:break-word;max-height:200px;overflow:auto;background:#f7f7f7;border-radius:6px;padding:10px}';
 
   // ---------- Construction de l'UI ----------
   function el(html) { var d = document.createElement('div'); d.innerHTML = html.trim(); return d.firstChild; }
@@ -143,54 +146,65 @@
     }
     var style = document.createElement('style'); style.textContent = css; document.head.appendChild(style);
 
-    var btn = el('<button id="psl-nw-btn" title="Laisser une note sur cette page">📝 Notes</button>');
+    var btn = el('<button id="psl-nw-btn" title="Laisser une note sur cette page"><span class="ico">📝</span>NOTES</button>');
     var panel = el(
       '<div id="psl-nw-panel">' +
-        '<div class="psl-nw-head"><div><b>Note de relecture</b><small>' + pageKey() + '.html</small></div>' +
+        '<div class="psl-nw-banner">Outil de relecture — ne fait pas partie du site</div>' +
+        '<div class="psl-nw-head"><div><b>Notes de relecture</b><small>Page : ' + pageKey() + '.html</small></div>' +
           '<button class="psl-nw-x" title="Fermer">×</button></div>' +
         '<div class="psl-nw-body">' +
-          '<textarea placeholder="Votre remarque sur cette page…"></textarea>' +
-          '<div class="psl-nw-row">' +
-            '<button class="psl-nw-btn1">Envoyer la note</button>' +
+          // Vue 1 : jeton seul (si pas de jeton)
+          '<div class="psl-nw-tokenview">' +
+            '<label>Jeton d’accès</label>' +
+            '<input class="psl-nw-token" type="password" placeholder="Collez le jeton fourni…" autocomplete="off">' +
+            '<div class="psl-nw-row"><button class="psl-nw-btn1 psl-nw-savetoken">Valider</button></div>' +
+            '<div class="psl-nw-hint">Jeton fourni par le propriétaire du site. Il reste dans votre navigateur.</div>' +
+          '</div>' +
+          // Vue 2 : rédaction de note (si jeton présent)
+          '<div class="psl-nw-noteview" style="display:none">' +
+            '<label>Votre nom <span style="font-weight:400;color:#999">(optionnel)</span></label>' +
+            '<input class="psl-nw-name" type="text" placeholder="ex : Marie">' +
+            '<label>Votre note sur cette page</label>' +
+            '<textarea placeholder="Votre remarque…"></textarea>' +
+            '<div class="psl-nw-row"><button class="psl-nw-btn1 psl-nw-send">Envoyer la note</button></div>' +
+            '<button class="psl-nw-link psl-nw-changetoken">Changer le jeton</button>' +
+            '<div class="psl-nw-existing" style="display:none"></div>' +
           '</div>' +
           '<div class="psl-nw-msg"></div>' +
-          '<button class="psl-nw-link psl-nw-toggleset">⚙︎ Réglages (jeton & nom)</button>' +
-          '<div class="psl-nw-set" style="display:none">' +
-            '<label>Votre nom (apparaît dans les notes)</label>' +
-            '<input class="psl-nw-name" type="text" placeholder="ex: Marie">' +
-            '<label>Jeton GitHub (fine-grained PAT)</label>' +
-            '<input class="psl-nw-token" type="password" placeholder="github_pat_…" autocomplete="off">' +
-            '<div class="psl-nw-row"><button class="psl-nw-btn1 psl-nw-savecfg">Enregistrer</button></div>' +
-            '<div class="hint">Le jeton reste dans votre navigateur. Demandez-le au propriétaire du site.</div>' +
-          '</div>' +
-          '<div class="psl-nw-existing" style="display:none"></div>' +
         '</div>' +
       '</div>'
     );
     document.body.appendChild(btn); document.body.appendChild(panel);
 
+    var tokenView = panel.querySelector('.psl-nw-tokenview');
+    var noteView = panel.querySelector('.psl-nw-noteview');
     var ta = panel.querySelector('textarea');
-    var sendBtn = panel.querySelector('.psl-nw-btn1');
+    var sendBtn = panel.querySelector('.psl-nw-send');
     var msg = panel.querySelector('.psl-nw-msg');
-    var setBox = panel.querySelector('.psl-nw-set');
     var nameI = panel.querySelector('.psl-nw-name');
     var tokenI = panel.querySelector('.psl-nw-token');
     var existing = panel.querySelector('.psl-nw-existing');
     var draftKey = LS.draftPrefix + pageKey();
 
-    // Restaurer brouillon + réglages
     ta.value = localStorage.getItem(draftKey) || '';
     nameI.value = getName();
-    tokenI.value = getToken();
     ta.addEventListener('input', function () { localStorage.setItem(draftKey, ta.value); });
 
     function setMsg(t, cls) { msg.textContent = t || ''; msg.className = 'psl-nw-msg ' + (cls || ''); }
 
-    function openPanel() {
-      panel.classList.add('open');
-      if (!getToken()) { setBox.style.display = 'block'; setMsg('Configurez d’abord votre jeton GitHub ⬇', 'err'); }
-      else loadExisting();
+    // Bascule entre les deux vues selon la présence d'un jeton
+    function showView() {
+      setMsg('');
+      if (getToken()) {
+        tokenView.style.display = 'none'; noteView.style.display = 'block';
+        loadExisting();
+      } else {
+        tokenView.style.display = 'block'; noteView.style.display = 'none';
+        tokenI.value = '';
+      }
     }
+    function openPanel() { panel.classList.add('open'); showView(); }
+
     function loadExisting() {
       existing.style.display = 'block'; existing.textContent = 'Chargement des notes existantes…';
       ghGet(notePath()).then(function (f) {
@@ -203,23 +217,24 @@
       if (panel.classList.contains('open')) panel.classList.remove('open'); else openPanel();
     });
     panel.querySelector('.psl-nw-x').addEventListener('click', function () { panel.classList.remove('open'); });
-    panel.querySelector('.psl-nw-toggleset').addEventListener('click', function () {
-      setBox.style.display = setBox.style.display === 'none' ? 'block' : 'none';
+
+    panel.querySelector('.psl-nw-savetoken').addEventListener('click', function () {
+      var v = (tokenI.value || '').trim();
+      if (!v) { setMsg('Collez d’abord le jeton.', 'err'); return; }
+      setToken(v); showView();
     });
-    panel.querySelector('.psl-nw-savecfg').addEventListener('click', function () {
-      setName(nameI.value); setToken(tokenI.value);
-      setMsg('Réglages enregistrés ✓', 'ok');
-      if (getToken()) loadExisting();
+    panel.querySelector('.psl-nw-changetoken').addEventListener('click', function () {
+      localStorage.removeItem(LS.token); showView();
     });
 
     sendBtn.addEventListener('click', function () {
       var text = ta.value.trim();
       if (!text) { setMsg('Écrivez d’abord une note.', 'err'); return; }
-      if (!getToken()) { setBox.style.display = 'block'; setMsg('Jeton GitHub manquant ⬇', 'err'); return; }
+      setName(nameI.value);
       sendBtn.disabled = true; setMsg('Envoi…', '');
       addNote(text).then(function () {
         ta.value = ''; localStorage.removeItem(draftKey);
-        setMsg('Note enregistrée dans le dépôt ✓', 'ok');
+        setMsg('Note enregistrée ✓', 'ok');
         loadExisting();
       }).catch(function (e) {
         setMsg(e.message, 'err');
